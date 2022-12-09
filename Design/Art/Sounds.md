@@ -1,3 +1,12 @@
 # BGM
+- [ ] Menu Screen  
+- [ ] Title Screen  
+- [ ] Outdoors  
+- [ ] Coffee Shop  
+- [ ] Sketchy Area  
+- [ ] Motorcycling  
 
-# SFX
+# SFX  
+- [ ] Coffee Shop  
+- [ ] Outdoors  
+- [ ] Motorcycling  
