@@ -1,7 +1,7 @@
 # Sprites  
 ### Poses
-- [x] Default Work Clothes  
-- [x] Default Casual Clothes  
+- [ ] Default Work Clothes  
+- [ ] Default Casual Clothes  
 - [ ] Greeting / Waving Work Clothes
 - [ ] Greeting / Waving Casual Clothes  
 - [ ] Surprised Work Clothes  
