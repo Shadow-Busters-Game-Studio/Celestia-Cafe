@@ -1,19 +1,20 @@
 # Sprites  
 ### Poses
-- [ ] Default Work Clothes  
-- [ ] Default Casual Clothes  
-- [ ] Greeting / Waving Work Clothes
-- [ ] Greeting / Waving Casual Clothes  
-- [ ] Surprised Work Clothes  
-- [ ] Surprised Casual Clothes  
+- [x] Default Work Clothes  
+- [x] Default Casual Clothes  
+- [x] Greeting / Waving Work Clothes
+- [x] Greeting / Waving Casual Clothes  
+- [x] Surprised Work Clothes  
+- [x] Surprised Casual Clothes  
   
 ### Expressions
-- [ ] Neutral  
+- [x] Neutral  
 - [ ] Smile  
-- [ ] Wink  
+- [x] Wink  
 - [ ] Serious / Concern  
 - [ ] Smug  
-- [ ] Blush  
+- [ ] Blush 
+- [x] Surprise   
 
 # CG  
 - [x] Kabedon  

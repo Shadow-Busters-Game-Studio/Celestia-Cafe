@@ -1,6 +1,8 @@
 # Created by https://www.toptal.com/developers/gitignore/api/windows,unity,c++,csharp
 # Edit at https://www.toptal.com/developers/gitignore?templates=windows,unity,c++,csharp
 
+*.clip
+
 ### C++ ###
 # Prerequisites
 *.d
