@@ -1,4 +1,4 @@
-# Sprites  
+# Tartaglia Sprites  
 ### Poses
 - [x] Default Work Clothes  
 - [x] Default Casual Clothes  
@@ -9,12 +9,17 @@
   
 ### Expressions
 - [x] Neutral  
-- [ ] Smile  
+- [x] Smile  
 - [x] Wink  
-- [ ] Serious / Concern  
-- [ ] Smug  
-- [ ] Blush 
+- [x] Serious  
+- [x] Smug  
+- [x] Blush 
 - [x] Surprise   
+
+# Other Sprites
+- [ ] old man?
+- [ ] anonymous group of women?
+- [ ] more...?
 
 # CG  
 - [x] Kabedon  
