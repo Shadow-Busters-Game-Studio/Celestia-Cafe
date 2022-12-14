@@ -48,9 +48,9 @@ Ajax: “Hi there! Welcome to Celestia Cafe. My name is Ajax and I’ll be takin
   - Seems like you’ve got some trustworthy neighbors. I hope we don’t disappoint~  
   - Uh, yeah. Sure.  
   - Ahha, well it doesn’t hurt that our coffee is pretty good too. Hope I don’t disappoint”  
-  Ajax: So, what would you like to order today?”  
 
 
+Ajax: So, what would you like to order today?”  
 `OPTION SCREEN:`   
   - Coffee. Black. E1 +3 E4 +1 E2 +1  
   - Can I get a matcha latte with oat milk and whipped cream on top. E3 +3E2 +1  
