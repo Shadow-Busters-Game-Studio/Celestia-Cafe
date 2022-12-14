@@ -11,7 +11,7 @@ tags: Opening Sequence, First Encounter
 // OPENING SEQUENCE
 // SETTING: Black Screen
 
-Whew! I’m finally done moving into my new apartment downtown! #line:03838c4 
+Whew! I'm finally done moving into my new apartment downtown! #line:03838c4 
 The weather is so nice today, I should check out some of the hot spots in the area. #line:037304b 
 My neighbors told me about a popular coffee shop not too far from here. #line:0203494 
 I'm so tired from all that cleaning and lifting- I'll start with that. #line:0f50742 
@@ -22,41 +22,41 @@ I'm so tired from all that cleaning and lifting- I'll start with that. #line:0f5
 
 Wow, it's a really short walk from the apartment. Not really that far at all! #line:02bb0d1 
 Huh? Why are there so many customers at this time of day?! #line:09162b5 
-I guess my neighbors weren’t kidding about this place being super popular. #line:0b21b1b 
+I guess my neighbors weren't kidding about this place being super popular. #line:0b21b1b 
 Let's see what all the hype is about- #line:03ca19a 
 
 // Scene change from outside shop to inside shop
 // Insert ring sound to note walking into coffee shop
 
 Oh, wow. There are quite a lot of customers around the register right now... 
-Hopefully this doesn’t take too long...
+Hopefully this doesn't take too long...
 
 Person: “Alright, that will be out shortly for you, miss! So, what would you like to order, sir?”
 
-Is that the barista I’m hearing?
+Is that the barista I'm hearing?
 
 // TODO: CG of AJAX!!!! TAKING ORDERS!!
-Barista: “Ok, got it! We’ll call your name when it’s ready.”  
+Barista: “Ok, got it! We'll call your name when it's ready.”  
 Barista: “Welcome! What would you like to order today?”  
-Customer 1: “I’ll take a v-vanilla latte”  
+Customer 1: “I'll take a v-vanilla latte”  
 Barista: “Alrightie, and will that be all for today?”  
 Customer 1: “Y-yes, t-thank you.”  
 Barista: “Why, of course!”  
 Customer 2: “GWAH! He is SOOO cute!”  
 Customer 3: “Right?! I should totally ask for his number”  
 Customer 4: “His smile is sweeter than my drink! And his eyes?! Those dreamy eyes…”  
-Customer 5: “Oh. My. God. He’s looking over towards me!!”  
+Customer 5: “Oh. My. God. He's looking over towards me!!”  
 // END CG
 
 Wow, it seems like this barista is a hit with the customers. 
-I’d hate to go up against him in a popularity contest that’s for sure.  
+I'd hate to go up against him in a popularity contest that's for sure.  
 Barista: “Next in line please.”
-Finally, looks like it’s my turn to order.  
-Barista: “Hi there! Welcome to Celestia Cafe. My name is Ajax and I’ll be taking your order today."
+Finally, looks like it's my turn to order.  
+Barista: “Hi there! Welcome to Celestia Cafe. My name is Ajax and I'll be taking your order today."
 
-Ajax: "I don’t think I’ve seen your face in here before. Is this your first visit?"
+Ajax: "I don't think I've seen your face in here before. Is this your first visit?"
     -> Yeah, it is! I actually just moved in nearby, and my neighbors highly recommended this place. 
-        Ajax: "Seems like you’ve got some trustworthy neighbors. I hope we don’t disappoint~" 
+        Ajax: "Seems like you've got some trustworthy neighbors. I hope we don't disappoint~" 
         <<set $ending3 to $ending3 + 3>>
         <<set $ending2 to $ending2 + 1>>
     -> Uh, yeah. Can I order now?  
@@ -64,7 +64,7 @@ Ajax: "I don’t think I’ve seen your face in here before. Is this your first 
         <<set $ending1 to $ending1 + 3>>
         <<set $ending2 to $ending2 + 1>>
     -> It is my first time. I heard this place was pretty popular, and now I see what draws in the crowd~
-        Ajax: "Ahha, well it doesn’t hurt that our coffee is pretty good too. Hope I don’t disappoint”  
+        Ajax: "Ahha, well it doesn't hurt that our coffee is pretty good too. Hope I don't disappoint”  
         <<set $ending4 to $ending4 + 3>>
         <<set $ending2 to $ending2 + 1>>
         <<set $ending1 to $ending1 + 1>>
@@ -85,13 +85,13 @@ Ajax: So, what would you like to order today?”
         <<set $ending2 to $ending2 + 1>>
         <<set $order to "Matcha Latte with Oat Milk and Whipped Cream on top">>
     -> I take a medium caramel cold brew. 
-        Ajax: "You got good taste. This is my go to order as well. I’ll get this out to you shortly."
+        Ajax: "You got good taste. This is my go to order as well. I'll get this out to you shortly."
         “Great! Thank you.”
         Ooo looks like he has similar tastes to me~
         <<set $ending4 to $ending4 + 3>>
         <<set $ending3 to $ending3 + 1>> 
         <<set $order to "Medium Caramel Cold Brew">>
-    -> Yeah, I’ll take an energy drink. 
+    -> Yeah, I'll take an energy drink. 
         Ajax: "Uhhhhh, okay. Sure…"
         “Great! Thank you.”
         Why did he look so confused? It was a pretty simple order.
@@ -101,7 +101,7 @@ Ajax: So, what would you like to order today?”
 
 Anyway, with a barista like Ajax working I can see why this place stays busy. All the customers are fawning over him.
 He did seem like a friendly guy, and his face was quite handsome I must admit.
-God, I’m going to turn into one of those gawking customers before I know it…
+God, I'm going to turn into one of those gawking customers before I know it…
 
 Ajax: "One {$order}!!!"
 
@@ -111,7 +111,7 @@ Ajax: "Hope you enjoy your drink~! Come back anytime!”
 
 “Thank you.”
 Oh my god, I think he just winked at me. This guy is pretty good. 
-I haven’t even tried the drink yet and I’m already thinking about my next visit.  
+I haven't even tried the drink yet and I'm already thinking about my next visit.  
 Sigh… What I would give to have a boyfriend like him to show me around town, make me nice drinks everyday, and smile at me with that gorgeous face…  
 I need to get these fantasies out of my mind before I lose it. 
 Time to just sit, relax, and enjoy my drink.
@@ -119,94 +119,99 @@ Time to just sit, relax, and enjoy my drink.
 Customer 2: “OMG! He is SOOO cool!”  
 Customer 3: “Of course he would drive a motorcycle. Take me with you~”  
 Customer 4: “A dreamy smile with the bad boy image of him on a motorcycle? Can he get any hotter?!”  
-Customer 5: “Oh. My. God. I think he looked over at me. I’m gonna faint~”  
+Customer 5: “Oh. My. God. I think he looked over at me. I'm gonna faint~”  
 
 Hmm? What are those customers talking about?
 
 // Insert motorcycle rev noise
 
 Outside, on that motorcycle, is that…Ajax?  
-Woah. I didn’t take him for the type of person to drive a motorcycle. I gotta agree with those other customers, it does up his appeal.  
+Woah. I didn't take him for the type of person to drive a motorcycle. 
+I gotta agree with those other customers, it does up his appeal.  
 And his motorcycle itself… Seems custom designed with all those intricate water details.  
-If only I was on there with him, holding him tight as he sped off… Guess I’m sticking to dreaming for now.  
-Enough daydreaming about the cute barista! I need to finish this delicious drink and get to exploring what else this city has to offer.  
+If only I was on there with him, holding him tight as he sped off… Guess I'm sticking to dreaming for now.  
+Enough daydreaming about the cute barista! 
+I need to finish this delicious drink and get to exploring what else this city has to offer.  
 And damn, this drink is pretty good. Must be some shop secret to get that deep flavor. 
 Paired with the allure of Ajax, I see why my neighbors recommended this place first.   
 Anyway, down the hatch!  
 // Gulp sound
-I hope this isn’t the only place with a super cute employee. Time to explore! 
+I hope this isn't the only place with a super cute employee. Time to explore! 
 
 
 // THE DISCOVERY
 // Sketchy Area, night time
 Whew. It has been a looong day of looking around, but not any person out there looking as handsome as Ajax.  
-Wow, a whole day of exploring, and I’m still hung up on the first dude I saw… I’m hopeless.  
+Wow, a whole day of exploring, and I'm still hung up on the first dude I saw… I'm hopeless.  
 I need to get him out of my mind and get home.  
-And then maybe I’ll see him again tomorrow when I visit the shop, hehe.  
-Hmmm, wait. That motorcycle over there… no way. It’s totally Ajax’s! 
+And then maybe I'll see him again tomorrow when I visit the shop, hehe.  
+Hmmm, wait. That motorcycle over there… no way. It's totally Ajax's! 
 It has the same water designs on it, and I doubt there is a store just pumping out motorcycles that unique.  
 But what is it doing all the way out here? This area seems pretty isolated. 
 Part of the reason I was going to leave was because I felt like I hit a deadend of stuff to explore, 
 but I guess the universe had one last place for me to visit, hehe.  
-It’s not like I’m stalking him either. I just happened to see his bike here. A-and what if he’s hurt? 
-I really should just check it out to see if he’s okay, of course.  
-// Walking over sound`*
-There are lights on in the building it’s parked in front of, and it sounds like some people are talking in there.  
-I know I probably shouldn’t, but the urge to look inside is so strong.  
-Oh! I could totally see what’s going on inside if I look through that window up there…  
-I shouldn’t… I should just head home and mind my own business.  
+It's not like I'm stalking him either. I just happened to see his bike here. A-and what if he's hurt? 
+I really should just check it out to see if he's okay, of course.  
+// Walking over sound*
+There are lights on in the building it's parked in front of, and it sounds like some people are talking in there.  
+I know I probably shouldn't, but the urge to look inside is so strong.  
+Oh! I could totally see what's going on inside if I look through that window up there…  
+I shouldn't… I should just head home and mind my own business.  
 Unless…  
     -> Look through the window  
-        Hmmm OK! I’m gonna do it. The curiosity is too great.
+        Hmmm OK! I'm gonna do it. The curiosity is too great.
         Time to climb~
         // rustling noises
-        Whew! Okay, I’m in position, and I was right! The view from here is perfect. Now let’s see…  
-        There! I see Ajax! Looks like he’s with two other people. Time to listen in~ 
+        Whew! Okay, I'm in position, and I was right! The view from here is perfect. Now let's see…  
+        There! I see Ajax! Looks like he's with two other people. Time to listen in~ 
         Person 1: “Are you sure about this recipe, Ajax?”  
-        Ajax: “Relax, OK? This is totally it. I work there after all, I’d be able to tell the difference. Besides, we already started producing. It’s too late to start over now.”  
-        Person 1: “You’re right. I’m just anxious for this to go well.”  
-        Person 2: “We all are. If this goes as planned, we’ll each be loaded in no time!”  
+        Ajax: “Relax, OK? This is totally it. I work there after all, I'd be able to tell the difference. 
+        Ajax: Besides, we already started producing. It's too late to start over now.”  
+        Person 1: “You're right. I'm just anxious for this to go well.”  
+        Person 2: “We all are. If this goes as planned, we'll each be loaded in no time!”  
         Ajax: “Exactly. Which is why I triple checked to make sure we got the right recipe.”  
-        Person 1: “Oh hey! It looks like the first batch is done. Let’s check out its quality.""
-        Interesting. Seems like they’re doing something to get rich quick. Something sketchy perhaps. 
+        Person 1: “Oh hey! It looks like the first batch is done. Let's check out its quality.""
+        Interesting. Seems like they're doing something to get rich quick. Something sketchy perhaps. 
         Ajax is continuing to surprise me with each passing moment.  
-        And the fact this potentially illicit activity isn’t dissuading me from liking him…  
-        I-I should just try to focus on what he’s doing exactly. I’m sure it’s not that bad.  
-        Wait a second… this aroma. It smells like… coffee?! Are they making coffee here? Well that’s not sketchy at all.  
-        So, why does it still seem suspicious though? Ajax did mention something about a recipe. Perhaps it’s…  
+        And the fact this potentially illicit activity isn't dissuading me from liking him…  
+        I-I should just try to focus on what he's doing exactly. I'm sure it's not that bad.  
+        Wait a second… this aroma. It smells like… coffee?! Are they making coffee here? Well that's not sketchy at all.  
+        So, why does it still seem suspicious though? Ajax did mention something about a recipe. Perhaps it's…  
         I should keep listening to learn more.  
-            -> Head home
-                I feel like I have eavesdropped for too long. I should just head home and preserve the crimeless image of Ajax in my head.
-                <<jump GAMEOVER2>>
-            -> Continue to listen  
-                I have to keep listening. I feel like I’m on the cusp of learning what’s going on.  
-                Ok, looks like they’re back from testing the first batch.  
-                Person 1: “Mmm~ You were totally right, Ajax! This tastes just like the shop’s!  
-                Ajax: “See, I told you there was no need to worry. Now that we have this, that old man’s business doesn’t stand a chance.”  
-                I knew it! They stole the Celestia Cafe’s secret recipe. But what value does that have to them?  
-                // Clang sound  
-                Shit! I accidentally knocked something over. Please tell me they didn’t hear that.  
-                Person 2: “Hey, did you guys hear that?”  
-                Great.  
-                I better skedaddle before I’m caught… but I do wanna know what they intend to do with the secret recipe.  
-                    -> Leave immediately  
-                    -> Continue to listen 
-                        Maybe they’ll think it was a stray cat. Or the wind. I gotta keep listening.
-                        <<jump GAMEOVER3>>
     -> Go home
-    Ugh, I probably shouldn’t go digging into the private life of a man I met literal hours ago. Home it is.
+    Ugh, I probably shouldn't go digging into the private life of a man I met literal hours ago. Home it is.
     <<jump GAMEOVER1>>
 
-I turn to leave in a haste and head home. 
+-> Head home
+    I feel like I have eavesdropped for too long. 
+    I should just head home and preserve the crimeless image of Ajax in my head.
+    <<jump GAMEOVER2>>
+-> Continue to listen  
+    I have to keep listening. I feel like I'm on the cusp of learning what's going on.  
+    Ok, looks like they're back from testing the first batch.  
+    Person 1: “Mmm~ You were totally right, Ajax! This tastes just like the shop's!  
+    Ajax: “See, I told you there was no need to worry. Now that we have this, that old man's business doesn't stand a chance.”  
+    I knew it! They stole the Celestia Cafe's secret recipe. But what value does that have to them?  
+    // Clang sound  
+    Shit! I accidentally knocked something over. Please tell me they didn't hear that.  
+    Person 2: “Hey, did you guys hear that?”  
+    Great.  
+
+I better skedaddle before I'm caught… but I do wanna know what they intend to do with the secret recipe.  
+    -> Leave immediately  
+        I turn to leave in a haste and head home. 
+    -> Continue to listen 
+        Maybe they'll think it was a stray cat. Or the wind. I gotta keep listening.
+        <<jump GAMEOVER3>>
 
 // Scene change to inside sketchy building 
 Person 1: “Eh, maybe it was a stray, or even the wind.”  
-Person 2: “You’re probably right.”  
-Ajax: “Still. I think I’ll go check it out.”  
+Person 2: “You're probably right.”  
+Ajax: “Still. I think I'll go check it out.”  
 
 // Rustling sounds
 // Scene changes to outside building  
-Ajax: “Hmm. I don’t see anyone. I suppose it really must’ve been the wind.  
+Ajax: “Hmm. I don't see anyone. I suppose it really must've been the wind.  
 Ajax: “Unless… what do we have here?”  
 // TODO: Insert CG of A holding keychain  
 Ajax: “Looks like your owner accidentally left you behind."
@@ -220,29 +225,30 @@ Ajax: “Well, newbie. You've got some explaining to do.”
 title: GAMEOVER1
 ---
 Just as I was turning around to go home, Ajax walked out of the building.  
-Ajax: “Oh? It’s the new customer. What are you doing here?” 
+Ajax: “Oh? It's the new customer. What are you doing here?” 
 Uh oh, his smiley appearance from earlier is gone.  
-“I-I was just out exploring the city since I’m new.”  
+“I-I was just out exploring the city since I'm new.”  
 Ajax: “Uh huh…”  
-Gotta change the topic fast or I won’t sound reliable.  
+Gotta change the topic fast or I won't sound reliable.  
 “Uh-Uh I really like your motorcycle by the way.”  
 Ajax: “How did you know it was mine?”  
-“Oh, well I saw you on it earlier, and it’s not hard to miss–”  
+“Oh, well I saw you on it earlier, and it's not hard to miss–”  
 Ajax: “Are you fucking stalking me?”  
 “What? N-No, of course not! Like I said, I was just exploring.”  
-Ajax: “Wow and here I thought you were kind of cute, but you’re just a creep. Get out of here stalker before I call the authorities.”  
+Ajax: “Wow and here I thought you were kind of cute, but you're just a creep. 
+Ajax: Get out of here stalker before I call the authorities.”  
 “B-But I–”  
 Ajax: “Now!”
-I’m too stunned to even respond, but I turn away and continue heading home. 
-Looks like I won’t be going to the coffee shop any more…
+I'm too stunned to even respond, but I turn away and continue heading home. 
+Looks like I won't be going to the coffee shop any more…
 GAME OVER! (1)
 ===
 title: GAMEOVER2
 --- 
-Yeah, and I don’t want to get involved too deep in this. I should just leave…  
+Yeah, and I don't want to get involved too deep in this. I should just leave…  
 Wh– AAAHH!  
 As I go to leave I slip from my vantage point and fall.
-Ow, ow, ow. I can’t move! The fall must’ve been too hard.  
+Ow, ow, ow. I can't move! The fall must've been too hard.  
 Oh no… Ajax probably heard me… but my eyelids feel like lead.  
 And I feel something warm on the back of my head…  
 Is… is this it? 
@@ -255,17 +261,18 @@ Person 1: “Maybe it was a stray cat?”
 Yes!  
 Person 2: “Or maybe it was the wind?”  
 Yes! Yes!  
-Ajax: “Or something… or someone else. I’ll go check it out just to be safe.”  
+Ajax: “Or something… or someone else. I'll go check it out just to be safe.”  
 Crap.  
 I gotta bounce before he catches me.  
 Ajax: “Going somewhere?”  
-He’s already outside?! Damn, he’s fast.  
-“I-it’s not what it looks like. I was just…admiring the glass work on this window!”  
-Ajax: “Likely story. But it doesn’t really matter what you were doing. You clearly saw what was going on inside.”  
+He's already outside?! Damn, he's fast.  
+“I-it's not what it looks like. I was just…admiring the glass work on this window!”  
+Ajax: “Likely story. But it doesn't really matter what you were doing."
+Ajax: "You clearly saw what was going on inside.”  
 “Whaaaat? I totally did not see you guys making stolen coffee or anything.”  
-Ajax: “Sigh…You really did see too much. Damn. It’s a shame. I thought you were pretty cute.”  
+Ajax: “Sigh…You really did see too much. Damn. It's a shame. I thought you were pretty cute.”  
 “C-cute?!”  
-Ajax: “But you gotta understand. We can’t have anyone finding out…”  
+Ajax: “But you gotta understand. We can't have anyone finding out…”  
 Before I respond, Ajax pulls out a gun and points it at me
 *BANG*
 DEAD END. GAME OVER! (3)
