@@ -1,19 +1,25 @@
-# Sprites  
+# Tartaglia Sprites  
 ### Poses
 - [x] Default Work Clothes  
 - [x] Default Casual Clothes  
-- [ ] Greeting / Waving Work Clothes
-- [ ] Greeting / Waving Casual Clothes  
-- [ ] Surprised Work Clothes  
-- [ ] Surprised Casual Clothes  
+- [x] Greeting / Waving Work Clothes
+- [x] Greeting / Waving Casual Clothes  
+- [x] Surprised Work Clothes  
+- [x] Surprised Casual Clothes  
   
 ### Expressions
-- [ ] Neutral  
-- [ ] Smile  
-- [ ] Wink  
-- [ ] Serious / Concern  
-- [ ] Smug  
-- [ ] Blush  
+- [x] Neutral  
+- [x] Smile  
+- [x] Wink  
+- [x] Serious  
+- [x] Smug  
+- [x] Blush 
+- [x] Surprise   
+
+# Other Sprites
+- [ ] old man?
+- [ ] anonymous group of women?
+- [ ] more...?
 
 # CG  
 - [x] Kabedon  
