@@ -23,21 +23,21 @@
 
 # CG  
 - [x] Kabedon  
-- [ ] First Meeting in Coffee Shop  
+- [x] First Meeting in Coffee Shop  
 - [ ] Holding MCs Lost Keychain  
 - [ ] Keychain on MCs Phone  
 - [ ] Kiss...?  
 - [ ] Dying in Tartaglia's Arms...?  
-- [ ] Tartaglia Dying  
+- [x] Tartaglia Dying  
 - [ ] Final Kiss  
 - [ ] Together at Newly Opened Coffee Shop  
 
 # Backgrounds  
-- [ ] Open City  
-- [ ] Coffee Shop Interior 
-- [ ] Coffee Shop Exterior  
-- [ ] Sketchy Building  
-- [ ] Sketchy Area  
+- [x] Open City  
+- [x] Coffee Shop Interior 
+- [x] Coffee Shop Exterior  
+- [x] Sketchy Building  
+- [x] Sketchy Area  
 
 # Objects  
 - [ ] Keychain
