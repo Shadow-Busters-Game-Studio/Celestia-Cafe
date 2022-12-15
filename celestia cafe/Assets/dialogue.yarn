@@ -53,7 +53,11 @@ I'd hate to go up against him in a popularity contest that's for sure.
 Barista: “Next in line please.”
 Finally, looks like it's my turn to order.  
 Barista: “Hi there! Welcome to Celestia Cafe. My name is Ajax and I'll be taking your order today."
+<<jump Choice1>>
 
+===
+title: Choice1
+---
 Ajax: "I don't think I've seen your face in here before. Is this your first visit?"
     -> Yeah, it is! I actually just moved in nearby, and my neighbors highly recommended this place. 
         Ajax: "Seems like you've got some trustworthy neighbors. I hope we don't disappoint~" 
@@ -68,7 +72,11 @@ Ajax: "I don't think I've seen your face in here before. Is this your first visi
         <<set $ending4 to $ending4 + 3>>
         <<set $ending2 to $ending2 + 1>>
         <<set $ending1 to $ending1 + 1>>
+<<jump Choice2>>
 
+===
+title: Choice2
+---
 Ajax: So, what would you like to order today?”
     -> Coffee. Black. 
         Ajax: "Keeping it simple. Okay, coming right up."
@@ -76,28 +84,28 @@ Ajax: So, what would you like to order today?”
         <<set $ending1 to $ending1 + 3>>
         <<set $ending4 to $ending4 + 1>>
         <<set $ending2 to $ending2 + 1>>
-        <<set $order to "Black Coffee">>
+        <<set $order to "black coffee">>
     -> Can I get a matcha latte with oat milk and whipped cream on top. 
         Ajax: "Of course you would…Great! That will be out shortly."
         “Great! Thank you.”
         I thought I heard him mumble something after I ordered…Hmm maybe I just imagined it.
         <<set $ending3 to $ending3 + 3>>
         <<set $ending2 to $ending2 + 1>>
-        <<set $order to "Matcha Latte with Oat Milk and Whipped Cream on top">>
+        <<set $order to "matcha latte with oat milk and whip">>
     -> I take a medium caramel cold brew. 
         Ajax: "You got good taste. This is my go to order as well. I'll get this out to you shortly."
         “Great! Thank you.”
         Ooo looks like he has similar tastes to me~
         <<set $ending4 to $ending4 + 3>>
         <<set $ending3 to $ending3 + 1>> 
-        <<set $order to "Medium Caramel Cold Brew">>
+        <<set $order to "medium caramel cold brew">>
     -> Yeah, I'll take an energy drink. 
         Ajax: "Uhhhhh, okay. Sure…"
         “Great! Thank you.”
         Why did he look so confused? It was a pretty simple order.
         <<set $ending2 to $ending2 + 3>>
         <<set $ending1 to $ending1 + 1>>  
-        <<set $order to "Energy Drink">>
+        <<set $order to "energy drink">>
 
 Anyway, with a barista like Ajax working I can see why this place stays busy. All the customers are fawning over him.
 He did seem like a friendly guy, and his face was quite handsome I must admit.
@@ -157,6 +165,11 @@ There are lights on in the building it's parked in front of, and it sounds like 
 I know I probably shouldn't, but the urge to look inside is so strong.  
 Oh! I could totally see what's going on inside if I look through that window up there…  
 I shouldn't… I should just head home and mind my own business.  
+<<jump Choice3>>
+
+===
+title: Choice3
+---
 Unless…  
     -> Look through the window  
         Hmmm OK! I'm gonna do it. The curiosity is too great.
@@ -177,26 +190,37 @@ Unless…
         I-I should just try to focus on what he's doing exactly. I'm sure it's not that bad.  
         Wait a second… this aroma. It smells like… coffee?! Are they making coffee here? Well that's not sketchy at all.  
         So, why does it still seem suspicious though? Ajax did mention something about a recipe. Perhaps it's…  
-        I should keep listening to learn more.  
     -> Go home
     Ugh, I probably shouldn't go digging into the private life of a man I met literal hours ago. Home it is.
     <<jump GAMEOVER1>>
 
--> Head home
-    I feel like I have eavesdropped for too long. 
-    I should just head home and preserve the crimeless image of Ajax in my head.
-    <<jump GAMEOVER2>>
--> Continue to listen  
-    I have to keep listening. I feel like I'm on the cusp of learning what's going on.  
-    Ok, looks like they're back from testing the first batch.  
-    Person 1: “Mmm~ You were totally right, Ajax! This tastes just like the shop's!  
-    Ajax: “See, I told you there was no need to worry. Now that we have this, that old man's business doesn't stand a chance.”  
-    I knew it! They stole the Celestia Cafe's secret recipe. But what value does that have to them?  
-    // Clang sound  
-    Shit! I accidentally knocked something over. Please tell me they didn't hear that.  
-    Person 2: “Hey, did you guys hear that?”  
-    Great.  
+<<jump Choice4>>
 
+===
+title: Choice4
+---
+I should keep listening to learn more.  
+    -> Head home
+        I feel like I have eavesdropped for too long. 
+        I should just head home and preserve the crimeless image of Ajax in my head.
+        <<jump GAMEOVER2>>
+    -> Continue to listen  
+        I have to keep listening. I feel like I'm on the cusp of learning what's going on.  
+        Ok, looks like they're back from testing the first batch.  
+        Person 1: “Mmm~ You were totally right, Ajax! This tastes just like the shop's!  
+        Ajax: “See, I told you there was no need to worry. Now that we have this, that old man's business doesn't stand a chance.”  
+        I knew it! They stole the Celestia Cafe's secret recipe. But what value does that have to them?  
+        // Clang sound  
+        Shit! I accidentally knocked something over. Please tell me they didn't hear that.  
+        Person 2: “Hey, did you guys hear that?”  
+        Great.  
+
+
+<<jump Choice5>>
+
+===
+title: Choice5
+---
 I better skedaddle before I'm caught… but I do wanna know what they intend to do with the secret recipe.  
     -> Leave immediately  
         I turn to leave in a haste and head home. 
