@@ -431,6 +431,7 @@ Ajax: “Maybe that's part of the appeal, but I'm drawn to you. I just know this
   - No *`GAME OVER`*  
   - Yes  
 
+<!-- TODO: CHANGE THIS TO MAKE SENSE [GAMEOVER4] -->
 Ajax: “Oh, ok. I get it, haha.”  
 ##### -> He walked back to the counter with a new solemn expression.  
 ##### -> Aw, I feel bad, but I don't want to accidentally let him know what I saw yesterday.  
@@ -450,6 +451,8 @@ Unknown voice: “Help me! Someone help me please!”
 Ajax: “Sorry, but I know you were there yesterday. I can't have anyone ratting out my plans, so I hope you understand.”  
 ##### -> A-Ajax? What is he saying, does he know I was there yesterday? I want to ask, but he raises a bat and swings it down.  
 ##### -> Everything went black…  
+
+
 Ajax: “Woah, I didn't expect you to agree!”  
 “T-Then why'd you even ask me?!”  
 Ajax: “No, no. This is great, don't worry! This was the safe choice to make. Come on, I'll show you around inside.”  
@@ -564,7 +567,7 @@ Ajax: “I'm…I'm glad I met…you…”
 “No, no, no, no, NOOOOO!”  
 ##### -> My wailing echoes throughout the empty building as I hear sirens close in in the distance.  
 
-*Could do this one with T and owner dying at same time, owner fleeing instead of being killed, or T weakly killing the owner as he threatens to kill mc  
+*Could do this one with A and owner dying at same time, owner fleeing instead of being killed, or T weakly killing the owner as he threatens to kill mc  
 #
 `Alt ENDING 1`  
 ##### -> I finally manage to slowly force my eyes to open.  
@@ -670,7 +673,6 @@ Ajax: “Punishment time~”
 
 #
 `ENDING 4`  
-*`Follows right after ending 3`*  
 ##### -> After what feels like an eternity of bliss, Ajax breaks our kiss, but still keeps his face close to mine.  
 Ajax: “We should probably drop off the rest of the merchandise before the others start to worry.”  
 “You're right. As much as I want to stay in this moment, we should probably get going.”  
