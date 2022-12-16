@@ -22,6 +22,7 @@ public class SceneDirector : MonoBehaviour {
     }
 
     // moves camera to camera location {location}>Camera in the scene
+    [YarnCommand("move_camera")]
     private void MoveCamera(Location location) {
         Transform destination = location.GetMarkerWithName("Camera");
         if (destination != null) {
@@ -32,14 +33,14 @@ public class SceneDirector : MonoBehaviour {
     }
 
     // fades in from a black screen over {time} seconds
-    [YarnCommand("fadeIn")]
+    [YarnCommand("fade_in")]
     private Coroutine FadeIn(float time = 1f) {
         Debug.Log($"Fading in from black over {time} seconds.");
         return StartCoroutine(fadeLayer.ChangeAlphaOverTime(0, time));
     }
 
     // fades out to a black screen over {time} seconds
-    [YarnCommand("fadeOut")]
+    [YarnCommand("fade_out")]
     private Coroutine FadeOut(float time = 1f) {
         Debug.Log($"Fading out to black over {time} seconds.");
         return StartCoroutine(fadeLayer.ChangeAlphaOverTime(1, time));

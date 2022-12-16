@@ -4,6 +4,7 @@
 <<declare $playerName = "Traveller" as string>> // TODO: actually implement player name
 <<declare $current = "opening" as string>>
 
+<<declare $skipping = false as bool>>
 <<declare $kissEventUnlocked = false as bool>>
 <<declare $ending1Unlocked = false as bool>>
 <<declare $ending2Unlocked = false as bool>>
@@ -24,8 +25,9 @@ Whew! I'm finally done moving into my new apartment downtown!
 The weather is so nice today, I should check out some of the hot spots in the area.
 My neighbors told me about a popular coffee shop not too far from here.
 I'm so tired from all that cleaning and lifting- I'll start with that.
-
-<<wait 3>>
+<<if !$skipping>>
+  <<wait 3>>
+<<endif>>
 // FIRST ENCOUNTER
 // SETTING: Coffee Shop- Outside & Inside, Daytime
 
@@ -115,9 +117,9 @@ Ajax: "So, what would you like to order today?"
         <<set $ending3 to $ending3 + 3>>
         <<set $ending2 to $ending2 + 1>>
         <<set $order to "matcha latte with oat milk and whip">>
-    -> I take a medium caramel cold brew. 
-        "I take a medium caramel cold brew." 
-        Ajax: "You got good taste. This is my go to order as well."
+    -> I'll take a medium caramel cold brew. 
+        "I'll take a medium caramel cold brew." 
+        Ajax: "You've got good taste. This is my go to order as well."
         "I'll get this out to you shortly."
         "Great! Thank you."
         Ooo looks like he has similar tastes to me~
@@ -179,6 +181,9 @@ Anyway, down the hatch!
 guuulp
 Ahhh, tastes good. I should try something else next time.
 I hope this isn't the only place with a super cute employee. Time to explore! 
+<<if !$skipping>>
+  <<wait 2>>
+<<endif>>
 
 // THE DISCOVERY
 // Sketchy Area, night time
@@ -193,7 +198,7 @@ It has the same water designs on it,
 and I doubt there is a store just pumping out motorcycles that unique.  
 But what is it doing all the way out here? 
 This area seems pretty isolated...
-Part of the reason I was going to leave was faaling like I hit a deadend of places to explore, 
+Part of the reason I was going to leave was feeling like I hit a deadend of places to explore, 
 but I guess the universe had one last visit planned for me, hehe.  
 It's not like I'm stalking him either. 
 I just happened to see his bike here....
@@ -201,7 +206,7 @@ And w-what if he's hurt?
 I really should check it out... just to see if he's okay, of course.  
 // Walking over sound
 There's a small light on in this building it's in front of, 
-and it sounds like some people are talking in there.  
+and it sounds like some people are talking in here.  
 I know I probably shouldn't, but the urge to look inside is so strong.  
 Oh! I could totally see what's going on inside if I look through that window up there...  
 I shouldn't... I should just head home and mind my own business.  
@@ -336,7 +341,7 @@ Yeah, that's why...
 God, I'm hopeless
 
 // coffee shop inside
-Seeing as there are a lot of people here, so It's safe to assume he's on shift.  
+Seeing as there are a lot of people here, it's safe to assume he's on shift.  
 Why am I suddenly so nervous?! 
 It's okay, he doesn't know anything. 
 I'm cool, I'm good. I'm just here for coffee. 
@@ -687,7 +692,7 @@ Ajax: "(Hmmm. As I expected..)"
 Ajax: "(This isn't good for me, but maybe I can...)"  
 Ajax starts muttering something to himself. 
 Maybe I can use this moment to slip away?  
-If i just slooooowly move this way...-
+If I just slooooowly move this way...-
 Ajax: "I've got a proposition for you."  
 Ooooor I can stay here...
 "A proposition?"  
@@ -706,6 +711,8 @@ Ajax: "You can even get a cut."
 "I don't even know what exactly you're trying to accomplish by then end of this!"
 Ajax: "Maybe that's part of the appeal, but I'm just so drawn to you."
 Ajax: "I cant just feel that this is the right move."
+Ajax: "I can explain everything to you if you accept."
+Ajax: "I promise it's all for the better of the town."
 Ajax: "So, what do you say, you want in?"  
 This man is more crazy than I thought. 
 But also even more charming.  
@@ -782,24 +789,34 @@ title: DAY3
 <<set $current to "day3">>
 // THE MORNING OF THE OPERATION
 // SETTING: black screen
-<<wait 3>>
+<<if !$skipping>>
+  <<wait 3>>
+<<endif>>
 yaaaaaaaaawn
 Alright. 
 Tonight's the night we need to move the merchandise.
 I feel so anxious that I can't sit still!
 I'm gonna go get ready for the day and then go for a walk.
-<<wait 1>>
+<<if !$skipping>>
+  <<wait 1>>
+<<endif>>
 // shift to city daytime
-<<wait 1>>
+<<if !$skipping>>
+  <<wait 1>>
+<<endif>>
 Ahhhh. The morning air feels a bit refreshing today.
 Maybe I'll pass by the cafe and say hi to Ajax.
 // shift to outside cafe daytime
-<<wait 1>>
+<<if !$skipping>>
+  <<wait 1>>
+<<endif>>
 Hmm... I don't see him working today...
 Maybe he doesn't have a shift today?
 Guess I should just go home and wait until it's time...
 // fade to black
-<<wait 3>>
+<<if !$skipping>>
+  <<wait 3>>
+<<endif>>
 
 // `THE FATEFUL NIGHT`  
 // `SETTING: Black Screen to Sketchy Building`  
@@ -807,8 +824,9 @@ It's been such a long day waiting to carry out the operation.
 I was really hoping to see him at the shoptoday, too... 
 but it's finally time to go help out.
 I better get going.
-
-<<wait 1>>
+<<if !$skipping>>
+  <<wait 1>>
+<<endif>>
 // *`Screen shifts to sketchy building`*  
 I arrive on the scene and see Ajax moving sacks of coffee from the building into a truck.
 "H-hey! I'm here!"
@@ -830,7 +848,9 @@ Ajax: "Why? Are you getting more interested in me?"
 But he's not wrong...
 There's still so much about him that I don't know yet.
 I hope I get a lot of chances to learn more!
-<<wait 1>>
+<<if !$skipping>>
+  <<wait 1>>
+<<endif>>
 Ahh... I think we're finally done.  
 "Is that the last of it?"  
 Ajax: "Yup. Let's take this over to the new place. Hop in."  
@@ -935,8 +955,9 @@ As if my mind has finally understood what has happened, I let out an echoing cry
 My wailing echoes throughout the empty building as I hear sirens close in in the distance.  
 Ajax...he's...gone...  
 // fade to black
-<<wait 3>>
-
+<<if !$skipping>>
+  <<wait 3>>
+<<endif>>
 // cue credits
 
 ===
@@ -967,7 +988,9 @@ My tears are flowing out of my face as I cry to him, but there is no response.
 As if my mind has finally understood what has happened, I let out an echoing cry.  
 Ajax...he's...gone...  
 // fade to black
-<<wait 3>>
+<<if !$skipping>>
+  <<wait 3>>
+<<endif>>
 
 // cue credits
 
@@ -1018,7 +1041,9 @@ I hear him continue to cry, and I want to wipe more of his tears away, but...
 I feel...so tired...  
 // fade to black
 I think...I'll just...rest...my eyes...for a...moment...  
-<<wait 3>>
+<<if !$skipping>>
+  <<wait 3>>
+<<endif>>
 
 // cue credits
 
@@ -1086,7 +1111,9 @@ Ajax...
 Ajax: "Haha, so you're a sucker for my smile? Good to know, good to know."  
 I can't see his face, but I can hear the smug smirk on it.  
 "Yeah, I guess you could say that~"  
-<<wait 1>>
+<<if !$skipping>>
+  <<wait 1>>
+<<endif>>
 Ajax: "Hey, so I know we have been through a lot together in the past couple days,"
 Ajax: "and it's probably obvious at this point"
 Ajax: "-or, at least I hope it is-"
@@ -1107,7 +1134,9 @@ That surprised me!
 With a new sense of thrill and adrenaline pumping through me, 
 I hold onto Ajax's- ahem -my boyfriend's waist even tighter.  
 // fade to black
-<<wait 3>>
+<<if !$skipping>>
+  <<wait 3>>
+<<endif>>
 
 // cue credits
 
@@ -1144,7 +1173,9 @@ So, this is what it's like to have a boyfriend. Not bad, not bad at all.
 With all that has happened today, my body appreciates the rest, and I quickly fall asleep...  
 
 // fade to black
-<<wait 2>>
+<<if !$skipping>>
+  <<wait 2>>
+<<endif>>
 //  DAY 4  
 yaawn
 What a surprisingly refreshing night's sleep! 
@@ -1199,7 +1230,9 @@ With that, we cling our cups together and take our first sips.
 My body is immediately filled with warmth and bliss.  
 It tastes like new beginnings.  
 // fade to black
-<<wait 3>>
+<<if !$skipping>>
+  <<wait 3>>
+<<endif>>
 
 // cue credits
 
