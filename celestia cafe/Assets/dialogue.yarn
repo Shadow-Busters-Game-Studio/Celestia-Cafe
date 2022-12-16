@@ -311,6 +311,7 @@ Ajax: "Leaving in a hurry most likely."
 Ajax: "Well, newbie. You've got some explaining to do."  
 
 // Fade to Black
+<<wait 3>>
 <<jump DAY2>>
 
 ===
@@ -710,7 +711,7 @@ Ajax: "You can even get a cut."
 "But we barely know each other! We literally met yesterday."  
 "I don't even know what exactly you're trying to accomplish by then end of this!"
 Ajax: "Maybe that's part of the appeal, but I'm just so drawn to you."
-Ajax: "I cant just feel that this is the right move."
+Ajax: "I can just feel that this is the right move."
 Ajax: "I can explain everything to you if you accept."
 Ajax: "I promise it's all for the better of the town."
 Ajax: "So, what do you say, you want in?"  
