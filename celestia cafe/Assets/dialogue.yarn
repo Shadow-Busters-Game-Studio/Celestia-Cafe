@@ -1258,6 +1258,10 @@ Ajax: "Now!"
 I'm too stunned to even respond, but I turn away and continue heading home. 
 Looks like I won't be going to the coffee shop any more...
 GAME OVER! (1)
+(How about we try that again, huh?)
+  -> Go back to choice before dead end
+    <<jump Choice3>>
+  -> Nah, I give up
 ===
 title: GAMEOVER2
 --- 
@@ -1270,6 +1274,10 @@ And I feel something warm on the back of my head...
 Is... is this it? 
 What a pathetic way to go...  
 DEAD END. GAME OVER! (2)
+(How about we try that again, huh?)
+  -> Go back to choice before dead end
+    <<jump Choice4>>
+  -> Nah, I give up
 ===
 title: GAMEOVER3
 --- 
@@ -1296,8 +1304,16 @@ Ajax: "But you gotta understand. We can't have anyone finding out..."
 Before I respond, he pulls out a gun, points it at me, and-
 *BANG*
 DEAD END. GAME OVER! (3)
+(How about we try that again, huh?)
+  -> Go back to choice before dead end
+    <<jump Choice5>>
+  -> Nah, I give up
 ===
 title: GAMEOVER4
 ---
 GAME OVER!
+(How about we try that again, huh?)
+  -> Go back to choice before dead end
+    <<jump Choice9>>
+  -> Nah, I give up
 ===
