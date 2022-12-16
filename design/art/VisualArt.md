@@ -26,10 +26,8 @@
 - [x] First Meeting in Coffee Shop  
 - [ ] Holding MCs Lost Keychain  
 - [ ] Keychain on MCs Phone  
-- [ ] Kiss...?  
 - [ ] Dying in Tartaglia's Arms...?  
 - [x] Tartaglia Dying  
-- [ ] Final Kiss  
 - [ ] Together at Newly Opened Coffee Shop  
 
 # Backgrounds  
