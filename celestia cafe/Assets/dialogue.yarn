@@ -311,6 +311,7 @@ Ajax: "Leaving in a hurry most likely."
 Ajax: "Well, newbie. You've got some explaining to do."  
 
 // Fade to Black
+<<wait 3>>
 <<jump DAY2>>
 
 ===
@@ -710,7 +711,7 @@ Ajax: "You can even get a cut."
 "But we barely know each other! We literally met yesterday."  
 "I don't even know what exactly you're trying to accomplish by then end of this!"
 Ajax: "Maybe that's part of the appeal, but I'm just so drawn to you."
-Ajax: "I cant just feel that this is the right move."
+Ajax: "I can just feel that this is the right move."
 Ajax: "I can explain everything to you if you accept."
 Ajax: "I promise it's all for the better of the town."
 Ajax: "So, what do you say, you want in?"  
@@ -1258,6 +1259,10 @@ Ajax: "Now!"
 I'm too stunned to even respond, but I turn away and continue heading home. 
 Looks like I won't be going to the coffee shop any more...
 GAME OVER! (1)
+(How about we try that again, huh?)
+  -> Go back to choice before dead end
+    <<jump Choice3>>
+  -> Nah, I give up
 ===
 title: GAMEOVER2
 --- 
@@ -1270,6 +1275,10 @@ And I feel something warm on the back of my head...
 Is... is this it? 
 What a pathetic way to go...  
 DEAD END. GAME OVER! (2)
+(How about we try that again, huh?)
+  -> Go back to choice before dead end
+    <<jump Choice4>>
+  -> Nah, I give up
 ===
 title: GAMEOVER3
 --- 
@@ -1296,8 +1305,16 @@ Ajax: "But you gotta understand. We can't have anyone finding out..."
 Before I respond, he pulls out a gun, points it at me, and-
 *BANG*
 DEAD END. GAME OVER! (3)
+(How about we try that again, huh?)
+  -> Go back to choice before dead end
+    <<jump Choice5>>
+  -> Nah, I give up
 ===
 title: GAMEOVER4
 ---
 GAME OVER!
+(How about we try that again, huh?)
+  -> Go back to choice before dead end
+    <<jump Choice9>>
+  -> Nah, I give up
 ===
