@@ -1,17 +1,20 @@
 ﻿title: Start
 ---
-<<declare $farthest = "" as string>> // for save progress
+<<declare $order = "order" as string>>
+<<declare $playerName = "Traveller" as string>> // TODO: actually implement player name
+<<declare $current = "opening" as string>>
 
-<<set $ending1 to 0>>
-<<set $ending2 to 0>>
-<<set $ending3 to 0>>
-<<set $ending4 to 0>>
-<<set $kissevent to 0>>
+<<declare $kissEventUnlocked = false as bool>>
+<<declare $ending1Unlocked = false as bool>>
+<<declare $ending2Unlocked = false as bool>>
+<<declare $ending3Unlocked = false as bool>>
+<<declare $ending4Unlocked = false as bool>>
 
-<<set $order to "order">>
-
-<<set $playerName to "Traveller">> // TODO: actually implement player name
-<<set $current to "opening">>
+<<declare $ending1 = 0 as number>>
+<<declare $ending2 = 0 as number>>
+<<declare $ending3 = 0 as number>>
+<<declare $ending4 = 0 as number>>
+<<declare $kissevent = 0 as number>>
 
 // DAY 1
 // OPENING SEQUENCE
@@ -66,6 +69,7 @@ Barista: "My name is Ajax and I'll be taking your order today."
 ===
 title: Choice1
 ---
+<<set $current to "choice1">>
 Ajax: "I don't think I've seen your face in here before. Is this your first visit?"
     -> Yeah, it is! I actually just moved in nearby-
         "Yeah, it is! I actually just moved in nearby,"
@@ -92,6 +96,7 @@ Ajax: "I don't think I've seen your face in here before. Is this your first visi
 ===
 title: Choice2
 ---
+<<set $current to "choice2">>
 Ajax: "So, what would you like to order today?"
     -> Coffee. Black. 
         "Coffee. Black." 
@@ -205,6 +210,7 @@ I shouldn't... I should just head home and mind my own business.
 ===
 title: Choice3
 ---
+<<set $current to "choice3">>
 Unless...  
     -> Look through the window  
         Hmmm 
@@ -250,6 +256,7 @@ Unless...
 ===
 title: Choice4
 ---
+<<set $current to "choice4">>
 I should keep listening to learn more.  
     -> Head home
         I feel like I have eavesdropped for too long. 
@@ -274,6 +281,7 @@ I should keep listening to learn more.
 ===
 title: Choice5
 ---
+<<set $current to "choice5">>
 I better skedaddle before they catch me snooping on them. 
 but I really wanna know what they intend to do with that secret recipe...  
     -> Leave immediately  
@@ -298,12 +306,12 @@ Ajax: "Leaving in a hurry most likely."
 Ajax: "Well, newbie. You've got some explaining to do."  
 
 // Fade to Black
-<<jump Interrogation>>
+<<jump DAY2>>
 
 ===
-title: Interrogation
+title: DAY2
 ---
-// DAY 2
+<<set $current to "day2">>
 // setting: black screen
 
 // wake up at home
@@ -328,59 +336,70 @@ Yeah, that's why...
 God, I'm hopeless
 
 // coffee shop inside
-Seeing as there are a lot of people here, I think it's safe to assume he's on shift.  
+Seeing as there are a lot of people here, so It's safe to assume he's on shift.  
 Why am I suddenly so nervous?! 
 It's okay, he doesn't know anything. 
 I'm cool, I'm good. I'm just here for coffee. 
 I got this.  
 Ajax: "Next!"  
-gasp 
-Oh god... it's my turn. Suddenly my confidence is waning.  
+Oh god... it's my turn. 
+Suddenly my confidence is waning.  
 // walk up to counter to order
 "H-hi, I'll take a-"  
 Ajax: "Oh! I know you! You're that pretty customer from yesterday~"  
 P-pretty?!  
 Ajax: "I'd never forget a face like yours."
-Ajax: "So, I'm guessing you liked the coffee?"
+Ajax: "So, I'm guessing you liked the {$order}?"
 Ajax: "Or perhaps something, or... someone... else brought you back."  
 His words are making me drown in sweat. 
+Also... he remembered my order!?
 It feels like he knows. I just need to remind myself he's flirting.  
 Wait. 
 He's flirting? With me?!  
 I look up to meet his gaze, and he gives me a bright smile and quick wink
 OMG I'M GONNA LOSE IT.  
 No! I got this. 
-Come on, it's time to get some info out of him. It's time to flirt back.  
-"Y-yeah the drinks are pretty good, but some...thing did capture my attention last time."  
+Come on, it's time to get some info out of him. 
+It's time... to flirt back.  
+"Yeah the drink was pretty good, but some...thing did capture my attention last time."  
 "T-The lighting! It's great for photos! HAHA!"
 I swung my phone around in a desperate attempt to hide my awkward body language.  
 God, I couldn't keep up, and I embarrassed myself...  
 Ajax: "Haha..."  
-Great. A sympathy laugh. Now I'll never learn more because why would he talk to a freak like me?!  
+Great. 
+A sympathy laugh. 
+Now I'll never learn more because WHY would he talk to a freak like me?!  
 Ajax: "Hey."  
 Eep!  
 Ajax's face suddenly seems more... stoic.
 What's with the sudden mood shift?!  
-Ajax: "Your phone... Is that a keychain on your phone?"  
-"Huh? O-Oh, this thing? Yeah, I won a collector's set at this convention a year ago."
+Ajax: "Your phone..."
+Is he about to ask for my number?
+Ajax: "Is that a keychain on your phone?"  
+Oh...
+"Huh? O-Oh, this thing?"
+"Yeah, I won a collector's set at this convention a year ago."
 "They're pretty rare, so I pride myself on having them~"  
 Ajax: "Pretty rare huh..."  
 Crap. He probably thinks I'm a loser now. 
-Note to self, don't overshare embarrassing details to the cute barista boy who is potentially a criminal.  
+Note to self, don't overshare embarrassing details to the cute barista boy.
+The cute barista boy who is... potentially a criminal?  
 Ajax: "So."  
 Oh! His response knocks me out of my self-rambling state.  
 Ajax: "Your order?"  
-Dang, what's with the curt tone? I must've really blown my chance...  
+Dang, what's with the curt tone? 
+I must've really blown my chances...  
 <<jump Choice6>>
 
 ===
 title: Choice6
 ---
-"Y-yeah, I'll get..."  
-  -> Chai Tea Latte  
+<<set $current to "choice6">>
+"Yeah, I'll get..."  
+  -> Chai Latte  
     <<set $ending4 to $ending4 + 3>>
     <<set $ending3 to $ending3 + 1>>
-    <<set $order to "chai tea latte">>
+    <<set $order to "chai latte">>
   -> Caramel Macchiato  
     <<set $ending1 to $ending1 + 3>>
     <<set $ending2 to $ending2 + 1>>
@@ -391,6 +410,8 @@ title: Choice6
     <<set $ending1 to $ending1 + 1>>
     <<set $order to "iced green tea">>
   -> Osmanthus Wine  
+    Ajax: (???)
+    Ajax: "Alright."
     <<set $ending2 to $ending2 + 3>>
     <<set $ending3 to $ending3 + 1>>
     <<set $ending4 to $ending4 + 1>>
@@ -400,32 +421,44 @@ title: Choice6
 Ajax: "One {$order}, coming right up."  
 No smile? No flirty response? 
 sigh... 
-Guess I'll never know what was going on in that building last night.  
-Found a place to sit and pout about my failure to get on his good side...
-Ajax: "Here's your drink~"  
-"O-Oh! Thank you so much!"  
-He brought it out to me... And he's smiling brightly at me now.  
+Found a nice place to sit.
+Time pout about my failure to get on his good side while I wait...
+...
+Now how am I supposed to learn about last night?
+Why was he in that sketchy building?
+And why was he trying to replicate the coffee recipe?
+Guess I'll never know what was truly going on last night.  
+Maybe I can jus-
+Ajax: "Here's your {$order}, lovely~"  
+"O-Oh!"
+"Thank you so much!"  
+He brought my order all the way out to me... 
+And he's smiling brightly at me now.  
 Ajax: "Hey, can I ask you a question?  
 "S-Sure."  
-He leans in closer to my ear and I have to force down a tiny gasp from his sudden proximity.  
-Ajax: "So, my shift is ending soon, and I was wondering-"
-Ajax: "if you don't mind of course-"
-Ajax: "if you would like to get to know each other a little better?"
+He leans in closer to my ear and I have to force down a tiny gasp. 
+What's with this his sudden close proximity?  
+Ajax: "So, my shift is ending soon, and I was wondering if..."
+Ajax: "you would like to get to know each other a little better?"
+Ajax: "No pressure of course."
 Ajax: "I guess what I'm asking is... would you like to go on a date with me?"  
+HUH??
 A DATE?!  
 I thought I blew my chances, 
 but here he is offering the best option I could only hope for.  
-This is my chance to get more info out of him, 
-and I guess the date aspect would be a bonus.  
-A huge bonus.  
+This is my opportunity to squeeze more info out of him, 
+and.. I GUESS the date aspect would be a bonus.  
+A huge bonus... hehehe.  
 <<jump Choice7>>
 
 ===
 title: Choice7
 ---
-Now, to choose my words wisely, and try not to mess this up.  
+<<set $current to "choice7">>
+Now to choose my words wisely and try not to mess this up.  
   -> OMG YES PLEASE! You are SOOOO hot.
     "OMG YES PLEASE! You are SOOOO hot."
+    "Like, is that even a QUESTION at this point?!"
     <<set $ending4 to $ending4 + 3>>
     <<set $ending3 to $ending3 + 1>>
     <<set $ending1 to $ending1 + 1>>
@@ -433,8 +466,8 @@ Now, to choose my words wisely, and try not to mess this up.
     "Uhh, I don't really know you, so no?"  
     <<set $ending1 to $ending1 + 3>>
     <<set $ending2 to $ending2 + 1>>
-  -> U-Um *blushes* S-Sure, hehe.  
-    "U-Um *blushes* S-Sure, hehe."  
+  -> Um *blushes* S-Sure, hehe.  
+    "Um *blushes* S-Sure, hehe."  
     <<set $ending3 to $ending3 + 3>>
     <<set $ending4 to $ending4 + 1>>
     <<set $kissevent to $kissevent + 1>> // 4
@@ -443,75 +476,93 @@ Now, to choose my words wisely, and try not to mess this up.
     <<set $ending2 to $ending2 + 3>>
     <<set $ending1 to $ending1 + 1>>
 
-Ajax: "Fantastic! I clock out in around 30 minutes, wanna meet outside by my bike then?"  
+Ajax: "Fantastic! I clock out in around 30 minutes.
+Ajax: "Want to meet outside by my bike then?"  
 "Sounds like a plan."  
 Ajax: "Great! I'll see you then~"  
-Still in a slight state of shock, I watch Ajax walk back to the counter with a smile on his face.  
+Still in a slight state of shock, I watch him walk back to the counter with a smirk on his face.  
 Customer 2: "Did you guys see that?!?!"  
 Customer 3: "Yeah, what the hell? He got all close to someone who looks like that?!"  
 Customer 1: "You don't suppose they're dating, do you?"  
-Customer 4: "As if! He was probably politely telling them they had a booger in their nose or something."  
+Customer 4: "As if! He was probably politely telling them they had a booger in their nose."  
 The sound of the giggling customers rings my ears...  
 Harsh much? They know I can hear them, right?  
 On second thought, they definitely know.  
 Sigh... 
-Looks like I didn't take into account the repercussions outside of Ajax finding out I know what he's up to.  
+I took into account that he could find out that I know about his shadiness, but...
+Looks like I didn't take into account the repercussions of his fan girlies.  
 But I can handle some clique-y self-proclaimed fans.  
 The customers' giggling continues  
 At least I hope I can...  
 Just ignore them {$playerName}, and enjoy the drink personally delivered by Ajax.  
-sip  
-Damn. I know it's only the second time I've had a drink here, but this is really good. 
+siiiip  
+Damn. 
+I know it's only the second time I've had a drink here, but this is really good. 
 Maybe I can kinda understand why Ajax would steal the recipe.  
 
 // Screen slowly flashes black for a moment to indicate time passing
 Okay, Ajax should be getting off around now.
 I should go wait by his motorcycle. 
+// scene change to outside coffee shop
+Now let's see...
+Ah, there it is.
+Hopefully I didn't come out here way too early.
+If I have to wait too long, I might get too nervous.
 I got this!
 
 // Scene transitions to Outside Coffee Shop, Daytime  
 Ajax: "Hey! There you are~"  
 Ajax walks toward me with a jovial smile.  
-"H-Hi!"  
+"H-Hey!"  
 Ajax: "You knew which bike was mine?"  
 Great, I didn't want him to have to wait for me, but now I seem like a stalker.  
-"Yeah, I saw you drive off yesterday. These designs are too unique to forget."  
+"Yeah, I saw you drive off yesterday."
+"These designs are too unique to forget."  
 Ajax: "Haha, thank you. I got the designs custom made."
 Ajax: "Anyway, I was thinking I could drive us somewhere nice,"
 Ajax: "and we could start with some good old-fashioned conversation?"  
-His words oozed with charm, it was hard to not think all his ideas were perfect.  
+His words oozed with charm, it was hard not to think all his ideas were perfect.  
 "I would love that."  
 Ajax: "Perfect. Hop on."  
-His smile seemed to have a devilish appearance for a second. 
+He's smiling at me!
+It looked like a devilish expression flashed across his face for a moment? 
 I think I'm imagining things. It's must be first date jitters.  
 I hop onto his motorcycle and dawn his extra helmet.  
 Ajax: "Hold on tight, okay?"  
-As he said that he guided my arms around his waist.  
+As he said that, he guided my arms around his waist.  
 "O-Okay."  
 With that, Ajax revs his engine and takes off down the street. 
-I embrace him tightly and take in the sweet smell of coffee on him...  
+I embrace him tightly and take in the sweet smell of coffee on him...
+He's so... warm. I could stay like this for hours.
+He's also a bit more muscular than I had imagined.
+Anyways, I'm getting wayyy off track right now.
 
 // Scene shift to Black  
-Mesmerized by my situation, I barely register that we're slowing down. 
+Mesmerized by him, I barely register that we're slowing down. 
 Ajax eventually stops and snaps me out of my daze.  
 Ajax: "We're here."  
 I hop off the motorcycle and remove my helmet to find myself in front of... 
 the building from last night?!  
 
 // Scene shifts to Sketchy City, Nighttime  
-Crap! Does this mean he knows I was here? But how??  
+Crap! 
+Does this mean he knows I was here? But how??  
 No. I shouldn't jump to conclusions. 
-Maybe he just took me here because he's obviously familiar with the spot. 
-Yeah that's probably it.  
+Nobody was around last night, and it was so dark.
+There's no way someone could have seen me!
+He just took me here because, obviously, he's familiar with the spot. 
+Yeah, that must be it.  
 Ajax: "So..."  
 Ajax: "Did you want to tell me what you were doing here last night?"
 Ajax: "Or will I have to force it out of you?"  
+"H...uh?"
 Shit. 
 He knows. But how?! 
 Ugh, there's no point trying to dwell on that. 
 Right now, I need to throw him off my trail. 
 Time to feign ignorance.  
-"W-What're you talking about? I don't think I've been to this part of town yet."
+"W-What're you talking about?"
+"I don't think I've been to this part of town yet."
 "After all, I did just move here."  
 Perfect, I will play the part of a newbie to town. 
 It's not like I'm totally lying. 
@@ -519,7 +570,9 @@ I've never even been here in the daytime before.
 The place barely looks familiar.  
 Just as I was gathering my confidence, 
 he pulls out a keychain that looks awfully similar to the one I normally keep on my bag.  
-Damn. That's why his mood shifted when he saw the one on my phone!  
+Aaaaand it's not on my bag...
+I must have dropped it while I was peeping.
+Damn. That's totally why his mood shifted when he saw the one on my phone!  
 Ajax: "Judging by the look on your face, I've guessed correctly."
 Ajax: "You really should be more careful with such rare collector's edition items."  
 Normally him remembering that fact would give me butterflies in my stomach, 
@@ -532,8 +585,9 @@ His words were a deadly mix of charm and malice.
 ===
 title: Choice8
 --- 
+<<set $current to "choice8">>
 I truly need to be careful with what I say right now... 
-  -> I follower you because I thought you were cute-
+  -> I followed you because I thought you were cute-
     "I followed you from the shop. I-I thought you were cute,"
     "and I just wanted to get to know you better."  
     <<set $ending3 to $ending3 + 3>>
@@ -548,26 +602,31 @@ I truly need to be careful with what I say right now...
     "What were you doing here last night? Jeez, mind your own business, pal." E1 +3E2 +1  
     <<set $ending1 to $ending1 + 3>>
     <<set $ending2 to $ending2 + 1>>
+
 Ajax: "Hmmm, is that so?"  
 Ajax steps closer to me and I stumble backwards against a wall as he slams his hand next to me.  
 
 // TODO: CG of kabedon  
 Ajax: "Hey, {$playerName}, hold still..."  
-// TODO: fade to black
+// fade to black
 I avert my gaze as his words melt me.  
 Ajax: "Something tells me you're not telling me the whole story."  
-H-He's so close. His warm breath is tickling my ear. 
+Eep! He's so close. 
+His warm breath is tickling my ear. 
 That same old intoxicating smell of coffee overwhelms my senses.  
-"I-I may have lingered around here f-for a moment."  
+"I m-may have lingered around here for a m-moment."  
 Ajax: "Mhmm, and?"  
 "A-and I may have heard some people in a building nearby."  
 Ajax: "Come on now, I know you did a lot more than hear..."  
-He's dangerously close now. If I turned to face him, I would hit his face.  
+He's dangerously close now. 
+If I turned to face him, I would hit his face.  
 "I-I... M-Maybe I-I..."  
 Ajax lets out a soft chuckle as he basically puts his mouth against my ear.  
-Ajax: "Looks like I've got a problem then. A very cute problem."  
+Ajax: "Looks like I've got a problem then."
+Ajax: "A very cute problem."  
 I feel my face erupt with heat. 
-Despite leaning against a wall, I feel like my knees will give out.  
+This is so embarassing, he's reading me like a book!
+Despite leaning against a wall, I feel like my knees are giving out.  
 
 <<if $kissevent > 4>>
     <<jump KISSEVENT>>
@@ -578,8 +637,9 @@ Despite leaning against a wall, I feel like my knees will give out.
 ===
 title: KISSEVENT
 ---
+<<set $kissEventUnlocked to true>>
 Suddenly, I feel the soft sensation of Ajax's hand under my chin.
- He gently turns my head to face him.  
+He gently turns my head to face him.  
 My eyes are squeezed shut, but I can feel his gaze piercing me deeply.  
 Ajax: "Look at me."  
 I'm afraid of how my body will react if I make eye contact with him. 
@@ -589,43 +649,51 @@ Ajax: "Open."
 A simple command, but it felt more like a compelling plea. 
 Like he wanted me to open my eyes for my sake rather than his.  
 Ajax: "For me."  
-The final hit to my fading mental fortitude- I can't help but fulfill his request.  
+The final hit to my fading mental fortitude- 
+I can't help but fulfill his request.  
 I slowly open my eyes to find a pair of piercing blue eyes staring longingly into mine.  
-// TODO: fade in
+// fade in
 Ajax: "Good...there...you go..."  
-// TODO: blur plus zoom in
+// blur plus zoom in
 His words come out slowly as his face inches closer to mine with each one he utters until...  
-// TODO: fade to black
+// fade to black
 His lips softly graze mine, and I let out a soft moan.  
-// TODO: fade in
-// TODO: fade to black
+// fade in
+// fade to black
 Ajax backs up enough for me to barely make out his blurry visage before placing his lips back on mine.  
 This time his kiss is much deeper. Much more passionate as he presses his body against mine.  
 I lose all track of time, all train of thought.  
-// TODO: fade in
+// fade in
 Too soon, he pulls back, taking his sweet lips with him.  
-// TODO: unblur
+// unblur
 My breathing is shaky and he looks at me with the smug smile of victory.  
+My heart is pounding in my ears... I hope he can't hear it too.
 Ajax: "Now... Do you want to tell me the rest of your little adventure from last night?"  
 <<jump ADMISSION>>
 
 ===
 title: ADMISSION
 ---
-My head feels like it's about to explode...I don't think I can keep up my defenses any longer.  
-"F-Fine. I'll tell you..."  
+<<set $current to "admission">>
+My head feels like it's about to explode...
+I don't think I can keep up my defenses any longer.   
+"Fine. I'll tell you..."  
 Ajax: "Oh?"  
 // TODO: end CG
 
 I proceed to tell him about how I watched and listened in from the window, and that I know what they are doing. 
 (Or I could at least guess what they were doing anyway.)
-Ajax: "Hmmm. As I expected...This isn't good for me, but maybe I can..."  
+Ajax: "(Hmmm. As I expected..)"
+Ajax: "(This isn't good for me, but maybe I can...)"  
 Ajax starts muttering something to himself. 
 Maybe I can use this moment to slip away?  
-I'm about to make a sly step away when Ajax blurts out...  
+If i just slooooowly move this way...-
 Ajax: "I've got a proposition for you."  
+Ooooor I can stay here...
 "A proposition?"  
-Ajax: "Yes. You got spunk and a good head on your shoulders. Not to mention you're cute."
+Ajax: "Yes. You got spunk and a good head on your shoulders."
+Now what does he mean by spunk..
+Ajax: "Not to mention you're quite cute. Especially up close."
 Ajax: "I like you, so how would you to be in on it?"  
 H-Huh?! He said so many things at once my mind is spinning.  
 ...C-Cute...  
@@ -634,26 +702,38 @@ Ajax: "Don't play coy now~ In on my little operation here."
 Ajax: "We could use someone like you."
 Ajax: "You can even get a cut."  
 "You want me to help you?"
-"But we barely know each other. We literally met yesterday."  
-Ajax: "Maybe that's part of the appeal, but I'm drawn to you."
-Ajax: "I just know this is the right move. So, what do you say? You want in?"  
-This man is more crazy than I thought. But also even more charming.  
+"But we barely know each other! We literally met yesterday."  
+"I don't even know what exactly you're trying to accomplish by then end of this!"
+Ajax: "Maybe that's part of the appeal, but I'm just so drawn to you."
+Ajax: "I cant just feel that this is the right move."
+Ajax: "So, what do you say, you want in?"  
+This man is more crazy than I thought. 
+But also even more charming.  
+I don't know... it seems kind of dangerous...
+On the other hand, it could be fun. 
+Especially when there's a cute guy involved!
 <<jump Choice9>>
 
 ===
 title: Choice9
 ---
-Gah! What should I say to him?
-  -> No 
+<<set $current to "choice9">>
+Gahhh! What should I say to him?
+  -> Decline 
+    "Nahh I think I'm good. I don't wanna gert involved with a criminal."
     <<jump GAMEOVER4>>
-  -> Yes  
+  -> Agree  
+    "Oh, alright."
+    I really can't say no to that face, though.
 
 Ajax: "Woah, I didn't expect you to agree!"  
-"T-Then why'd you even ask me?!"  
+"Then why'd you even ask me?!"  
 Ajax: "No, no. This is great, don't worry! This was the safe choice to make."
+Safe? What's that supposed to mean, anyways...
 Ajax: "Come on, I'll show you around inside."  
-"O-Ok"  
-Something tells me that option wasn't much of a choice...  
+"O-Okay"  
+Something tells me that option wasn't much of a choice...
+Best not to dwell on things like that.
 
 // *`Screen shifts to black`*  
 Ajax leads me inside the building  
@@ -662,27 +742,32 @@ Ajax leads me inside the building
 Immediately, I'm overwhelmed with the aroma of coffee.  
 "That sure is a lot of coffee."  
 Ajax: "Great, isn't it!"  
-Ajax: "Like you have probably theorized, this coffee was made using the recipe from Celestia Cafe.  
-"About that, I understand the drinks there are pretty good, but why copy the recipe?  
-Ajax: "Glad you asked. The owner's an asshat. 
+Ajax: "Like you have probably theorized, this coffee was made using the recipe from Celestia Cafe."  
+"About that, I understand the drinks there are pretty good, but why copy the recipe?"  
+Ajax: "Glad you asked! The owner's an asshat." 
 Ajax: "He's done a lot of bad shit, and to top it off he barely pays us employees."
-Ajax: "He thinks that with his secret recipe no other coffee shop stands a chance, so he can act however he pleases."  
+Ajax: "He thinks that with his secret recipe no other coffee shop stands a chance, so he can act however he pleases." 
+Ajax: "He honestly doesn't deserve the profit he's making with the way he treats us." 
 "That's horrible. So, you want to give him a proper rival in this war of coffee shops?"  
-Ajax: "Exactly. Without his special coffee recipe, and me of course, his business is gonna crumble."  
-"I think your absence will be the final straw. You got quite a following, you know?  
-Ajax: "Haha. Can I count you among them then?  
-"I was hoping I'd be a little higher on the totem pole."  
+Ajax: "Exactly. Without his special coffee recipe- and me of course -his business is gonna crumble."  
+"I think your absence will be the final straw."
+"You got quite a following, you know?"  
+Ajax: "Haha. Can I count you among them then?"  
+"I was hoping I'd be a little higher on the pyramid than a 'follower'."  
 Ajax: "Mhmm. I like the way you think. I knew bringing you on was a good idea."  
 I can't help but blush at Ajax's compliment.  
 Ajax: "So, the big day for us is two days away."
 Ajax: "That's when we are setting up shop and opening."
 Ajax: "Tomorrow night we move the merchandise. Can I count on you to be there?"
+Tomorrow!? And the opening's only two days from now? That's so soon.
+I guess it's doable, though. Don't have much else going on since I just moved here.
 "Of course."  
 Ajax: "Perfect. After that, hopefully it's smooth sailing."
 Ajax: "Oh, and of course you'll have a spot open to work at the shop. Right next to me~"
-A smooth talker as always. But who could say no to him?  
 "I couldn't think of any other way I'd want it."  
-Ajax: "I'm glad. Well, that concludes the tour. Come on, I'll drive you home."  
+A smooth talker as always. Is there anyone who could say no to him?  
+Ajax: "I'm glad. Well, that concludes the tour."
+Ajax: "Come on, I'll drive you home."  
 
 // *`Screen shifts to black`*  
 Ajax drove me home and took off with a wave. 
@@ -694,65 +779,109 @@ He can definitely count on me. I won't let him down!
 ===
 title: DAY3
 ---
+<<set $current to "day3">>
+// THE MORNING OF THE OPERATION
+// SETTING: black screen
+<<wait 3>>
+yaaaaaaaaawn
+Alright. 
+Tonight's the night we need to move the merchandise.
+I feel so anxious that I can't sit still!
+I'm gonna go get ready for the day and then go for a walk.
+<<wait 1>>
+// shift to city daytime
+<<wait 1>>
+Ahhhh. The morning air feels a bit refreshing today.
+Maybe I'll pass by the cafe and say hi to Ajax.
+// shift to outside cafe daytime
+<<wait 1>>
+Hmm... I don't see him working today...
+Maybe he doesn't have a shift today?
+Guess I should just go home and wait until it's time...
+// fade to black
+<<wait 3>>
+
 // `THE FATEFUL NIGHT`  
 // `SETTING: Black Screen to Sketchy Building`  
-// *`Screen slow flash back to black`*  
+It's been such a long day waiting to carry out the operation. 
+I was really hoping to see him at the shoptoday, too... 
+but it's finally time to go help out.
+I better get going.
 
-It's been such a long day waiting to help Ajax. 
-I've been so anxious all day, I can't sit still. 
-I was hoping to see him at the shop, but he wasn't working,  
-but it's finally time to go over to the building and help.  
-
+<<wait 1>>
 // *`Screen shifts to sketchy building`*  
+I arrive on the scene and see Ajax moving sacks of coffee from the building into a truck.
+"H-hey! I'm here!"
 Ajax: "Hey, you came!"  
-Ajax rushes over to me and embraces me tightly. He smells like freshly roasted coffee.  
-"O-Of course I came. I'm all in, remember?"  
+Ajax rushes over to me and embraces me tightly. 
+He still smells like freshly roasted coffee.  
+"Of course I came. I'm all in, remember?"  
 Ajax: "Right, right. How could I forget~"  
 Ajax: "My friends are at the new place right now with most of the merchandise."
 Ajax: "We just need to pack up the rest and join up with them."  
 "Sounds like a plan!"  
 Ajax: "Alright, let's get a move on."  
-We start hauling the bags of coffee into a truck. 
+We start hauling the bags of coffee into the truck. 
+"So, how long have you been planning this?"
+Ajax: "I'm not really sure. I haven't kept track of it."
+Ajax: "Has to have been at least a couple months though."
+Ajax: "Why? Are you getting more interested in me?"
+"A-as if."
+But he's not wrong...
+There's still so much about him that I don't know yet.
+I hope I get a lot of chances to learn more!
 <<wait 1>>
 Ahh... I think we're finally done.  
 "Is that the last of it?"  
 Ajax: "Yup. Let's take this over to the new place. Hop in."  
-Just as we are about to get in the truck, we hear a shout.  
+Just as we are closing up the truck, we hear a shout.  
 Unknown voice: "NOT SO FAST!"  
-We whip around to see an old man with a crazy look in his eye. He's obviously very agitated.  
-Ajax: "The owner..."  
+We whip around to see an old man with a crazy look in his eye. 
+He's obviously very agitated.  
+Ajax: "(It's Celestia Cafe's owner...)"  
 Ajax whispers. That crazy old dude is the owner of Celestia Cafe? 
 The man does seems hellbent on stopping us, so it makes sense.  
 "(What should we do?)"  
 Ajax: "(I think I'll take a page from your book of playing oblivious.)"  
 He gives me a quick wink and takes a few steps toward the owner.  
-Ajax: "What are you doing here, old man? Business slow since I quit?  
-So that's why I didn't see him today...  
-Ajax: "Still, doesn't mean you should beg me to come back."
-Ajax: "Not a very good look for you."  
+Ajax: "What are you doing here, old man?"
+Ajax: "Business slow since I quit?"  
+So that's why I didn't see him working today...
+Why didn't he tell me?  
+Ajax: "Still, doesn't mean you have to come all the way out here to beg me to come back."
+Ajax: "It's not a great look for you."  
 Owner: "Cut the shit, pretty boy!"
+Pfft.. pretty boy. Haha.
 Owner: "You don't think I know what you're up to here in your silly little factory?!"
-Ajax: "You took my recipe. I know it!"
-Ajax: "Neither of you are going anywhere until I search this place."  
-Ajax: "There's no recipe here, old man. This is my place and you're not searching shit."  
-Owner: "Think I don't know the smell of my own recipe, boy?!"
+Owner: "You took my recipe. I know it!"
+Owner: "Neither of you are going anywhere until I search this place."  
+Ajax: "There's no recipe here, old man."
+Ajax: "This is my place and you're not searching shit."  
+Owner: "Think I don't know the smell of my own recipe, child?!"
 Owner: "Quit the facade! You can't fool me, you thief!"  
 Ajax: "Tch."  
-Oh no, this old man isn't buying it. I think it's time I step in...  
+Oh no, this old man isn't buying it. 
+I think it's time I step in...  
 "With all due respect sir, you can't search this place without a warrant."  
 Owner: "You stay out of this, you little vermin!"  
-Ajax: "Hey! Don't talk to them like that!"  
+Rude.
+Ajax: "Hey! Don't talk to them like that!"
+He's defending me... my heart.  
 Owner: "Aww, now isn't this sweet. Young love."
 Owner: "Why don't you spare yourself the trouble and abandon this low life while you still can."  
 "How dare you! Ajax is an amazing person!"
-"You're the low life here! Trying to intimidate two young adults and forcefully search this place without a warrant!"  
+"You're the low life here!"
+"Trying to intimidate two young adults and forcefully search this place without a warrant!"  
 Owner: "Oh, I'll show you my warrant..."  
 The owner pulls out a gun and points it at me.  
 Owner: "Does this suffice?"  
-I swallow hard, and I'm paralyzed in fear.  
-Owner: "Perhaps removing you from the equation will make the pretty boy here more cooperative."  
+A gun???
+When I agreed to help out, I didn't realize how high the stakes would be!
+Gulp
+I-I can't move. I'm paralyzed with fear.  
+Owner: "Perhaps removing you from the equation will make pretty boy here more cooperative."  
 Ajax: "No, don't!"  
-Ajax pulls out a gun as well and rushes in front of me.  
+Ajax whips out a gun and rushes in front of me.  
 Owner: "Enough of these games!"  
 The owner cocks the gun, and I squeeze my eyes shut.  
 BANG
@@ -773,6 +902,7 @@ A gunshot sends my eardrums ringing.
 ===
 title: ENDING1
 ---
+<<set $ending1Unlocked to true>>
 // fade in
 I finally manage to slowly force my eyes to open.  
 But as soon as I opened them, I wished they were closed again.  
@@ -782,22 +912,32 @@ Owner: "Served him right! Now, there can be no witnesses..."
 Blinded by my rage, I spot the gun Ajax had tried to use to protect me.  
 My body moves before my mind does. I pick up the gun, aim it at the owner, and pull the trigger.  
 BANG
-I barely register the owner falling over as I return my focus to Ajax.  
+Owner: "Ahh!"
+I barely register the owner falling to the floor as I return my focus to Ajax.  
 
+"Come on, Ajax. Come on! Open your eyes!"  
+My words are choked down by my sobs, and I caress his cheek, silently pleading.  
+Ajax: cough cough 
 // TODO: *`Scene shift to CG of Ajax dying on floor`*  
-"Come on, Ajax. Come on. Open your eyes!'  
-My words are choked down by my sobs, and I caress Ajax's cheek, silently pleading.  
-Ajax: "cough cough" 
-As he coughs, his eyes partially open to face me. 
-His blue irises are as striking as ever.  
+His eyes partially open to face me while I hold him in front of me. 
+His blue eyes are as striking as ever.  
 "Yes, yes! That's it, open your eyes!"  
+"Stay with me, please!"
 I don't know if he can even understand me through my cries.  
 Ajax: "I-I'm..."  
 "Shh, shh. It's okay. Don't speak. Save your strength."  
 Ajax: "I'm...I'm glad I met...you..."  
 He gives me a weak smile before his eyes close once more, and his body goes limp.  
 "No, no, no, no, NOOOOO!"  
+"Open your eyes, Ajax. Come on!! Please, you have to stay with me!"  
+My tears are flowing out of my face as I cry to him, but there is no response.  
+As if my mind has finally understood what has happened, I let out an echoing cry.  
 My wailing echoes throughout the empty building as I hear sirens close in in the distance.  
+Ajax...he's...gone...  
+// fade to black
+<<wait 3>>
+
+// cue credits
 
 ===
 title: ALTENDING1
@@ -811,13 +951,14 @@ Across the building I see the owner in a similar state.
 Returning my focus to Ajax, I plead for him to open his eyes.  
 "Come on, Ajax! Please, open your eyes! Please!!"  
 My words are choked down by my sobs, and I caress Ajax's cheek still silently begging.  
-"cough cough" 
+Ajax: cough cough 
 
-// *`Scene shifts to CG of Ajax dying on floor`*  
-Ajax weakly coughs as his eyes partially open to face me. 
-His blue irises are as striking as ever.  
+// TODO: *`Scene shift to CG of Ajax dying on floor`*  
+His eyes partially open to face me while I hold him in front of me. 
+His blue eyes are as striking as ever.  
 Ajax: "Looks like... it was a draw..."  
-"Shh shh. Don't speak. Save your strength. And you won because you're going to be just fine, OK?"   
+"Shh shh. Don't speak. Save your strength."
+"And you won because you're going to be just fine, OK?"   
 Ajax: "I'm... I'm glad I met...you..."  
 He gives me a weak smile as his eyes begin to close again, and his body goes limp.  
 "No, no, no, NOOOO!"  
@@ -825,11 +966,14 @@ He gives me a weak smile as his eyes begin to close again, and his body goes lim
 My tears are flowing out of my face as I cry to him, but there is no response.  
 As if my mind has finally understood what has happened, I let out an echoing cry.  
 Ajax...he's...gone...  
+// fade to black
+<<wait 3>>
+
+// cue credits
 
 ===
 title: ENDING2
 ---
-
 <<if $ending3 > $ending2>>
     <<jump ENDING3n4>>
 <<endif>>
@@ -838,12 +982,15 @@ title: ENDING2
     <<jump ENDING3n4>>
 <<endif>>
 
+<<set $ending2Unlocked to true>>
+
 // fade in
 I open my eyes slowly, my ears still ringing. 
 My shoulders and arms are sore from moving all the coffee. 
 My legs and feet are begging for a rest from standing for so long.   
 And my stomach. My stomach...feels...warm?   
 I slowly look down at my stomach, and I see a dark stain growing on my clothes. 
+"cough cough"
 I gingerly hold the spot and bring my hand up to my face.  
 It's...covered in blood.  
 My body finally reacts to the feeling and I collapse.  
@@ -863,12 +1010,17 @@ Shh. No, no. Don't cry.
 I strain my hand up to his face and wipe a tear from his cheek. 
 He opens his eyes at my touch, and he places his hand against mine.  
 Ajax: "Please...please. Don't leave me"  
+Ajax: "I finally found someone who can keep up with me, I can't lose you already."
 His voice sounds so...sad.  
-"I'm glad I met...you..."  
+"I'm glad I... met you..."  
 I try to say more, but the words don't come out.  
 I hear him continue to cry, and I want to wipe more of his tears away, but...  
 I feel...so tired...  
+// fade to black
 I think...I'll just...rest...my eyes...for a...moment...  
+<<wait 3>>
+
+// cue credits
 
 ===
 title: ENDING3n4
@@ -908,33 +1060,36 @@ Together.
 ===
 title: ENDING3
 ---
-Eventually, we break our lips apart from one another, and I stare deeply into Ajax's deep blue eyes.  
-Ajax: "I'd do anything for you."   
-He caresses my left cheek. I hold his hand there.  
+<<set $ending3Unlocked to true>>
+Eventually, we break our lips apart from one another, and I stare deeply into his deep blue eyes.  
+Ajax: "I know it hasn't been long, but..."
+Ajax: "I'm so happy I finally found someone who can keep up with me."
+Ajax: "I just want you to know that I'd do anything for you."   
+He caresses my left cheek. I put my hand over his and press my lips in his palm.  
 "Me too."  
 Ajax: "After what just happened, I'd better take you home personally."  
 "But what about the merchandise?"  
-Ajax: "I'll come back later to deal with it."
-Ajax: "For now, I need to be sure that you get home, safe and sound."  
+Ajax: "I'll come back later to deal with it. Cuties like you shouldn't need to work too hard."
+Ajax: "For now, I need to be sure that you get home safe and sound."  
 "O-Ok, if you say so..."  
 // rev noises
 vroom vroom vrooooooooom
-
 // TODO: *`Insert CG of riding on motorcycle with Ajax`*  
 I hop on the back of Ajax's motorcycle, and he takes off towards my place.  
 Ajax: "You know...I just gotta say, you moving here and us meeting...was the miracle I didn't know I needed."  
 I squeeze my arms around him tighter.  
-Ajax: "The moment I saw you enter Celestia Cafe I knew you were something else, someone special."
+Ajax: "The moment I saw you enter Celestia Cafe I knew you were something else- someone special."
 Ajax: "And I just knew I had to see that special up close."  
-Ajax: "And I knew right away that I would be enraptured by you."
-Ajax: "Your smile alone holds enough charm to sway a whole town to your liking."  
+Ajax...
+"And I knew right away that I would be enraptured by you."
+"Your smile alone holds enough charm to sway a whole town to your liking."  
 Ajax: "Haha, so you're a sucker for my smile? Good to know, good to know."  
 I can't see his face, but I can hear the smug smirk on it.  
-"Yeah, I guess you can say that~"  
-After some more driving in silence, Ajax speaks up again.  
+"Yeah, I guess you could say that~"  
+<<wait 1>>
 Ajax: "Hey, so I know we have been through a lot together in the past couple days,"
 Ajax: "and it's probably obvious at this point"
-Ajax: "-at least I hope it is-"
+Ajax: "-or, at least I hope it is-"
 Ajax: "but I was just wondering if we could, you know, make it official?"  
 For a guy so naturally charming, it was nice to hear him speak so nervously.  
 Time for a little teasing~  
@@ -947,17 +1102,26 @@ Ajax: "You were teasing me just now, weren't you?"
 Ajax: "There's no way I'm letting you off the hook for that."
 Ajax: "Punishment time~"  
 Ajax proceeds to do a wheelie and speed off even faster towards my place.  
+"Aaah!"
+That surprised me!
 With a new sense of thrill and adrenaline pumping through me, 
-I hold onto Ajax's- my boyfriend's waist even tighter.  
+I hold onto Ajax's- ahem -my boyfriend's waist even tighter.  
+// fade to black
+<<wait 3>>
+
+// cue credits
 
 ===
 title: ENDING4
 ---
-After what feels like an eternity of bliss, Ajax breaks our kiss but still keeps his face close to mine.  
+<<set $ending4Unlocked to true>>
+After what feels like an eternity of bliss, he breaks our kiss but still keeps his face close to mine.  
 Ajax: "We should probably drop off the rest of the merchandise before the others start to worry."  
 "You're right. As much as I want to stay in this moment, we should probably get going."  
 Ajax gives me a smile in response as we head to the truck and take off to the new shop.  
-*`Vroom sounds and fade to black and then coffee shop`*  
+vroom vroooooom
+// fade to black
+// change to new coffee shop exterior
 Ajax: "Welcome to Tartelette Roasting Company!"
 Ajax: "Why don't you take a look around while my friends and I unload."  
 Ajax calls over his friends, and they start unloading as I begin my look around.  
@@ -967,24 +1131,25 @@ Yet, despite its uniqueness, the shop exudes a sense of home.
 I have no doubt that the people are going to love it here.  
 Ajax: "So, what do you think?"  
 "It's amazing! This place screams success."
-"And with you working here...well that guarantees it."  
+"And with you working here...well, that guarantees it."  
 Ajax: "Haha, well I know I'll be full of motivation each day with you around~"  
 My face quickly heats up.  
 Ajax: "We're done setting up for the night."
 Ajax: "Come on, I'll take you home. You gotta be well rested for the grand opening tomorrow."  
 
 // *`Rev sound and Scene shifts to black`*  
-With that, we take off, and Ajax drops me off at my place. 
+With that, we take off, and he drops me off at my place. 
 He places a quick peck on my cheek and flashes me a wink before taking off.  
 So, this is what it's like to have a boyfriend. Not bad, not bad at all.  
 With all that has happened today, my body appreciates the rest, and I quickly fall asleep...  
 
-// *`Slow flash and back to black`*  
+// fade to black
+<<wait 2>>
 //  DAY 4  
-
+yaawn
 What a surprisingly refreshing night's sleep! 
 I guess my body knew that today was an important day and gave me just what I needed.  
-The shop will be opening soon, I should get there before then.  
+The shop will be opening soon, so I should get there before then.  
 I quickly get ready and head to the shop.  
 
 // *`Scene shift to outside coffee shop`*  
@@ -1000,7 +1165,7 @@ Before I could even reply to their snide comments, Ajax opened the door.
 Ajax: "Great, you're here!"   
 Customers collectively: "OMG!!! Hi Ajax~"  
 Ajax: "Hi, everyone! Thank you all for coming here for Tartelette Roasting Co's grand opening." 
-"We will be opening shortly, so please wait just a little longer. Thank you for your understanding~"  
+Ajax: "We will be opening shortly, so please wait just a little longer. Thank you for your understanding~"  
 Customers: "Of course, Ajax!"  
 Ajax gives them a model customer service smile and returns his focus to me.  
 Ajax: "Come on, babe. Let's go inside. There's still lots to do."  
@@ -1033,7 +1198,10 @@ Ajax: "Together."
 With that, we cling our cups together and take our first sips.  
 My body is immediately filled with warmth and bliss.  
 It tastes like new beginnings.  
+// fade to black
+<<wait 3>>
 
+// cue credits
 
 // *Plot holes: owner dead body never dealt with  
 ===
