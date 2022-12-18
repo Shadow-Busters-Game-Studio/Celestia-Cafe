@@ -426,13 +426,16 @@ Ajax: “Maybe that’s part of the appeal, but I’m drawn to you. I just know 
 `OPTION SCREEN:`   
   - No *`GAME OVER`*  
   - Yes  
-
+  
+  <!-- TODO Add to yarn dialogue -->
 Ajax: “Oh, ok. I get it, haha.”  
--> He walked back to the counter with a new solemn expression.  
+-> He walked back to the building with a new solemn expression.  
 -> Aw, I feel bad, but I don’t want to accidentally let him know what I saw yesterday.  
--> Oh god he’s staring daggers into me. Maybe I should make this drink to go…  
-
-*`You go outside the shop and decide to go for a walk SCENE SHIFT to outside coffee shop`*  
+-> Oh god he’s staring daggers into me. Maybe I should leave now…  
+"Hey, I'm gonna go now, is that cool?"  
+Ajax: "..."  
+He's just sitting in front of the building in silence. Whatever, I'm just gonna go.
+*`You turn to leave and go for a walk back towards the coffee shop`*  
 -> At least it’s a nice day for a walk. Let’s try to not think about hurting Ajax’s feelings.  
 Unknown voice: “Help me! Someone help me please!”  
 -> What was that? Is someone in trouble?! I should go check it out.  
@@ -445,7 +448,9 @@ Unknown voice: “Help me! Someone help me please!”
 “Wha…What happened…?  
 Ajax: “Sorry, but I know you were there yesterday. I can’t have anyone ratting out my plans, so I hope you understand.”  
 -> A-Ajax? What is he saying, does he know I was there yesterday? I want to ask, but he raises a bat and swings it down.  
--> Everything went black…  
+-> Everything went black…     
+  
+
 Ajax: “Woah, I didn’t expect you to agree!”  
 “T-Then why’d you even ask me?!”  
 Ajax: “No, no. This is great, don’t worry! This was the safe choice to make. Come on, I’ll show you around inside.”  
