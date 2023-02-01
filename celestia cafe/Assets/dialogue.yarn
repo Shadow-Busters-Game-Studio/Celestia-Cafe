@@ -4,6 +4,24 @@
 <<declare $playerName = "Traveller" as string>> // TODO: actually implement player name
 <<declare $current = "opening" as string>>
 
+// backgrounds:
+//   black - Black Screen
+//   coffee-shop-inside - Coffee Shop Inside
+//   coffee-shop-front-night - Coffee Shop Outside, Nighttime
+//   coffee-shop-front-day - Coffee Shop Outside, Daytime
+//   sketchy-area-night - Sketchy Area, Nighttime
+//   sketchy-area-day - Sketchy Area, Daytime
+//   sketchy-building-night - Sketchy Area, Nighttime
+//   sketchy-building-day - Sketchy Area, Daytime
+//   city-night - Sketchy Area, Nighttime
+//   city-day - Sketchy Area, Daytime
+//   back-alley-night - Sketchy Area, Nighttime
+//   back-alley-day - Sketchy Area, Daytime
+//   roasting-co-night - Sketchy Area, Nighttime
+//   roasting-co-day - Sketchy Area, Daytime
+
+<<declare $background = "black" as string>>
+
 <<declare $skipping = false as bool>>
 <<declare $kissEventUnlocked = false as bool>>
 <<declare $ending1Unlocked = false as bool>>
@@ -30,6 +48,7 @@ I'm so tired from all that cleaning and lifting- I'll start with that.
 <<endif>>
 // FIRST ENCOUNTER
 // SETTING: Coffee Shop- Outside & Inside, Daytime
+<<set $background to "coffee-shop-front-day">>
 
 Wow, it's a really short walk from the apartment. Not really that far at all!
 Huh? Why are there so many customers at this time of day?!
@@ -37,6 +56,7 @@ I guess my neighbors weren't kidding about this place being super popular.
 Let's see what all the hype is about-
 
 // Scene change from outside shop to inside shop
+<<set $background to "coffee-shop-inside">>
 // Insert ring sound to note walking into coffee shop
 
 Oh, wow. There are quite a lot of customers around the register right now... 
@@ -47,6 +67,7 @@ Hopefully this doesn't take too long...
 Is that the barista I'm hearing?
 
 // TODO: CG of AJAX!!!! TAKING ORDERS!!
+<<set $background to "cg-ajax-barista">>
 Barista: "Ok, got it! We'll call your name when it's ready."  
 Barista: "Welcome! What would you like to order today?"  
 Customer 1: "I'll take a v-vanilla latte"  
@@ -187,6 +208,7 @@ I hope this isn't the only place with a super cute employee. Time to explore!
 
 // THE DISCOVERY
 // Sketchy Area, night time
+<<set $background to "sketchy-area-night">>
 Whew. It has been a looong day of looking around, 
 but not a single person out there looking as handsome as Ajax.  
 Wow, a whole day of exploring, and I'm still hung up on the first dude I saw... I'm hopeless.  
@@ -218,6 +240,7 @@ title: Choice3
 <<set $current to "choice3">>
 Unless...  
     -> Look through the window  
+        <<set $background to "sketchy-building-night">>
         Hmmm 
         OK! I'm gonna do it. 
         The curiosity is too great.
@@ -296,13 +319,11 @@ but I really wanna know what they intend to do with that secret recipe...
         I gotta keep listening.
         <<jump GAMEOVER3>>
 
-// Scene change to inside sketchy building 
 Person 1: "Eh, maybe it was a stray, or even the wind."  
 Person 2: "You're probably right."  
 Ajax: "Still. I think I'll go check it out."  
 
 // Rustling sounds
-// Scene changes to outside building  
 Ajax: "Hmm. I don't see anyone. I suppose it really must've been the wind.  
 Ajax: "Unless... what do we have here?"  
 // TODO: Insert CG of A holding keychain  
@@ -311,6 +332,7 @@ Ajax: "Leaving in a hurry most likely."
 Ajax: "Well, newbie. You've got some explaining to do."  
 
 // Fade to Black
+<<set $background to "black">>
 <<wait 3>>
 <<jump DAY2>>
 
@@ -318,8 +340,6 @@ Ajax: "Well, newbie. You've got some explaining to do."
 title: DAY2
 ---
 <<set $current to "day2">>
-// setting: black screen
-
 // wake up at home
 yaaaaaaaaawn...
 ...
@@ -342,11 +362,17 @@ Yeah, that's why...
 God, I'm hopeless
 
 // coffee shop inside
+<<set $background to "coffee-shop-outside-day">>
+<<wait 1>>
 Seeing as there are a lot of people here, it's safe to assume he's on shift.  
+Time to head in!  
+<<set $background to "coffee-shop-inside">>
+<<wait 1>>
 Why am I suddenly so nervous?! 
 It's okay, he doesn't know anything. 
 I'm cool, I'm good. I'm just here for coffee. 
 I got this.  
+<<wait 1>>
 Ajax: "Next!"  
 Oh god... it's my turn. 
 Suddenly my confidence is waning.  
@@ -417,6 +443,7 @@ title: Choice6
     <<set $order to "iced green tea">>
   -> Osmanthus Wine  
     Ajax: (???)
+    Ajax: (Only an alcoholic old man would order wine at this hour...)
     Ajax: "Alright."
     <<set $ending2 to $ending2 + 3>>
     <<set $ending3 to $ending3 + 1>>
@@ -429,7 +456,9 @@ No smile? No flirty response?
 sigh... 
 Found a nice place to sit.
 Time pout about my failure to get on his good side while I wait...
+<<wait 1>>
 ...
+<<wait 1>>
 Now how am I supposed to learn about last night?
 Why was he in that sketchy building?
 And why was he trying to replicate the coffee recipe?
@@ -507,16 +536,22 @@ I know it's only the second time I've had a drink here, but this is really good.
 Maybe I can kinda understand why Ajax would steal the recipe.  
 
 // Screen slowly flashes black for a moment to indicate time passing
+<<set $background to "black">>
+<<wait 2>>
+<<set $background to "coffee-shop-inside">>
 Okay, Ajax should be getting off around now.
 I should go wait by his motorcycle. 
 // scene change to outside coffee shop
 Now let's see...
+<<set $background to "coffee-shop-outside-day">>
 Ah, there it is.
 Hopefully I didn't come out here way too early.
 If I have to wait too long, I might get too nervous.
 I got this!
 
-// Scene transitions to Outside Coffee Shop, Daytime  
+<<set $background to "black">>
+<<wait 2>>
+<<set $background to "coffee-shop-outside-day">>
 Ajax: "Hey! There you are~"  
 Ajax walks toward me with a jovial smile.  
 "H-Hey!"  
@@ -544,13 +579,16 @@ He's also a bit more muscular than I had imagined.
 Anyways, I'm getting wayyy off track right now.
 
 // Scene shift to Black  
+<<set $background to "black">>
 Mesmerized by him, I barely register that we're slowing down. 
 Ajax eventually stops and snaps me out of my daze.  
+<<set $background to "sketchy-area-day">>
 Ajax: "We're here."  
 I hop off the motorcycle and remove my helmet to find myself in front of... 
 the building from last night?!  
 
-// Scene shifts to Sketchy City, Nighttime  
+// Scene shifts to Sketchy Building, Daytime  
+<<set $background to "sketchy-building-daytime">>
 Crap! 
 Does this mean he knows I was here? But how??  
 No. I shouldn't jump to conclusions. 
@@ -613,8 +651,10 @@ Ajax: "Hmmm, is that so?"
 Ajax steps closer to me and I stumble backwards against a wall as he slams his hand next to me.  
 
 // TODO: CG of kabedon  
+<<set $background to "cg-kabedon">>
 Ajax: "Hey, {$playerName}, hold still..."  
 // fade to black
+<<set $background to "black">>
 I avert my gaze as his words melt me.  
 Ajax: "Something tells me you're not telling me the whole story."  
 Eep! He's so close. 
@@ -659,17 +699,22 @@ The final hit to my fading mental fortitude-
 I can't help but fulfill his request.  
 I slowly open my eyes to find a pair of piercing blue eyes staring longingly into mine.  
 // fade in
+<<set $background to "cg-kabedon">>
 Ajax: "Good...there...you go..."  
 // blur plus zoom in
 His words come out slowly as his face inches closer to mine with each one he utters until...  
 // fade to black
+<<set $background to "black">>
 His lips softly graze mine, and I let out a soft moan.  
 // fade in
+<<set $background to "cg-kabedon">>
 // fade to black
+<<set $background to "black">>
 Ajax backs up enough for me to barely make out his blurry visage before placing his lips back on mine.  
 This time his kiss is much deeper. Much more passionate as he presses his body against mine.  
 I lose all track of time, all train of thought.  
 // fade in
+<<set $background to "cg-kabedon">>
 Too soon, he pulls back, taking his sweet lips with him.  
 // unblur
 My breathing is shaky and he looks at me with the smug smile of victory.  
@@ -686,6 +731,7 @@ I don't think I can keep up my defenses any longer.
 "Fine. I'll tell you..."  
 Ajax: "Oh?"  
 // TODO: end CG
+<<set $background to "sketchy-building-daytime">>
 
 I proceed to tell him about how I watched and listened in from the window, and that I know what they are doing. 
 (Or I could at least guess what they were doing anyway.)
@@ -743,10 +789,11 @@ Ajax: "Come on, I'll show you around inside."
 Something tells me that option wasn't much of a choice...
 Best not to dwell on things like that.
 
-// *`Screen shifts to black`*  
+<<set $background to "black">>
 Ajax leads me inside the building  
 
 // *`Screen shifts to inside sketchy building, daytime`*  
+<<set $background to "sketchy-building-daytime">>
 Immediately, I'm overwhelmed with the aroma of coffee.  
 "That sure is a lot of coffee."  
 Ajax: "Great, isn't it!"  
@@ -777,7 +824,7 @@ A smooth talker as always. Is there anyone who could say no to him?
 Ajax: "I'm glad. Well, that concludes the tour."
 Ajax: "Come on, I'll drive you home."  
 
-// *`Screen shifts to black`*  
+<<set $background to "black">>
 Ajax drove me home and took off with a wave. 
 My mind is reeling from all that has happened today, but one thing is certain- 
 I'm in love with Ajax.  
@@ -802,6 +849,7 @@ I'm gonna go get ready for the day and then go for a walk.
   <<wait 1>>
 <<endif>>
 // shift to city daytime
+<<set $background to "city-daytime">>
 <<if !$skipping>>
   <<wait 1>>
 <<endif>>
@@ -815,6 +863,7 @@ Hmm... I don't see him working today...
 Maybe he doesn't have a shift today?
 Guess I should just go home and wait until it's time...
 // fade to black
+<<set $background to "black">>
 <<if !$skipping>>
   <<wait 3>>
 <<endif>>
@@ -828,7 +877,8 @@ I better get going.
 <<if !$skipping>>
   <<wait 1>>
 <<endif>>
-// *`Screen shifts to sketchy building`*  
+// *`Screen shifts to sketchy building`* 
+<<set $background to "sketchy-building-night">> 
 I arrive on the scene and see Ajax moving sacks of coffee from the building into a truck.
 "H-hey! I'm here!"
 Ajax: "Hey, you came!"  
@@ -908,6 +958,7 @@ The owner cocks the gun, and I squeeze my eyes shut.
 BANG
 A gunshot sends my eardrums ringing.
 // fade to black
+<<set $background to "black">>
 
 <<if $ending2 > $ending1>>
     <<jump ENDING2>>
@@ -940,6 +991,7 @@ I barely register the owner falling to the floor as I return my focus to Ajax.
 My words are choked down by my sobs, and I caress his cheek, silently pleading.  
 Ajax: cough cough 
 // TODO: *`Scene shift to CG of Ajax dying on floor`*  
+<<set $background to "cg-ajax-death">>
 His eyes partially open to face me while I hold him in front of me. 
 His blue eyes are as striking as ever.  
 "Yes, yes! That's it, open your eyes!"  
@@ -956,6 +1008,7 @@ As if my mind has finally understood what has happened, I let out an echoing cry
 My wailing echoes throughout the empty building as I hear sirens close in in the distance.  
 Ajax...he's...gone...  
 // fade to black
+<<set $background to "black">>
 <<if !$skipping>>
   <<wait 3>>
 <<endif>>
@@ -976,6 +1029,7 @@ My words are choked down by my sobs, and I caress Ajax's cheek still silently be
 Ajax: cough cough 
 
 // TODO: *`Scene shift to CG of Ajax dying on floor`*  
+<<set $background to "cg-ajax-death">>
 His eyes partially open to face me while I hold him in front of me. 
 His blue eyes are as striking as ever.  
 Ajax: "Looks like... it was a draw..."  
@@ -989,6 +1043,7 @@ My tears are flowing out of my face as I cry to him, but there is no response.
 As if my mind has finally understood what has happened, I let out an echoing cry.  
 Ajax...he's...gone...  
 // fade to black
+<<set $background to "black">>
 <<if !$skipping>>
   <<wait 3>>
 <<endif>>
@@ -1022,6 +1077,7 @@ My body finally reacts to the feeling and I collapse.
 Ajax: "No!"  
 Ajax catches me before I fully fall on the ground.  
 // TODO: *`Scene change to CG of Ajax looking down, crying over MC`*  
+<<set $background to "cg-mc-death">>
 Ajax: "No, no, no! This wasn't supposed to happen. It should've been me!"  
 How...how did this...happen?  
 I feel something small and warm touch my face. 
@@ -1041,6 +1097,7 @@ I try to say more, but the words don't come out.
 I hear him continue to cry, and I want to wipe more of his tears away, but...  
 I feel...so tired...  
 // fade to black
+<<set $background to "black">>
 I think...I'll just...rest...my eyes...for a...moment...  
 <<if !$skipping>>
   <<wait 3>>
@@ -1053,6 +1110,7 @@ title: ENDING3n4
 ---
 I hear a loud thud hit the ground. Like a person falling over.  
 // fade in
+<<set $background to "sketchy-building-night">>
 Worried about Ajax, I force my eyes open and see...  
 The owner, lying face first on the floor.  
 Ajax: "Are you alright?"  
@@ -1101,6 +1159,7 @@ Ajax: "For now, I need to be sure that you get home safe and sound."
 // rev noises
 vroom vroom vrooooooooom
 // TODO: *`Insert CG of riding on motorcycle with Ajax`*  
+<<set $background to "cg-motorcycle-ride">>
 I hop on the back of Ajax's motorcycle, and he takes off towards my place.  
 Ajax: "You know...I just gotta say, you moving here and us meeting...was the miracle I didn't know I needed."  
 I squeeze my arms around him tighter.  
@@ -1135,6 +1194,7 @@ That surprised me!
 With a new sense of thrill and adrenaline pumping through me, 
 I hold onto Ajax's- ahem -my boyfriend's waist even tighter.  
 // fade to black
+<<set $background to "black">>
 <<if !$skipping>>
   <<wait 3>>
 <<endif>>
@@ -1151,7 +1211,10 @@ Ajax: "We should probably drop off the rest of the merchandise before the others
 Ajax gives me a smile in response as we head to the truck and take off to the new shop.  
 vroom vroooooom
 // fade to black
+<<set $background to "black">>
+<<wait 2>>
 // change to new coffee shop exterior
+<<set $background to "roasting-co-night">>
 Ajax: "Welcome to Tartelette Roasting Company!"
 Ajax: "Why don't you take a look around while my friends and I unload."  
 Ajax calls over his friends, and they start unloading as I begin my look around.  
@@ -1168,15 +1231,16 @@ Ajax: "We're done setting up for the night."
 Ajax: "Come on, I'll take you home. You gotta be well rested for the grand opening tomorrow."  
 
 // *`Rev sound and Scene shifts to black`*  
+<<set $background to "black">>
 With that, we take off, and he drops me off at my place. 
 He places a quick peck on my cheek and flashes me a wink before taking off.  
 So, this is what it's like to have a boyfriend. Not bad, not bad at all.  
 With all that has happened today, my body appreciates the rest, and I quickly fall asleep...  
 
-// fade to black
 <<if !$skipping>>
   <<wait 2>>
 <<endif>>
+
 //  DAY 4  
 yaawn
 What a surprisingly refreshing night's sleep! 
@@ -1185,6 +1249,7 @@ The shop will be opening soon, so I should get there before then.
 I quickly get ready and head to the shop.  
 
 // *`Scene shift to outside coffee shop`*  
+<<set $background to "roasting-co-day">>
 Oh, wow! There are already quite a lot of customers lined up outside. 
 I guess word spread of this place opening quickly. 
 And I'm sure news of Ajax working here helped bring in these people as well.  
@@ -1203,6 +1268,7 @@ Ajax gives them a model customer service smile and returns his focus to me.
 Ajax: "Come on, babe. Let's go inside. There's still lots to do."  
 
 // *`Scene shifts to Inside Coffee Shop`*  
+<<set $background to "flipped-cafe-inside">>
 Ajax quickly pulls me inside, and as the doors close I hear the customers outside shout a confused "Babe?!".  
 "Hehe, you did that on purpose, didn't you."  
 Ajax: "Maybe~"  
@@ -1218,6 +1284,7 @@ Man, this guy never disappoints.
 Ajax: "Perfect~"  
 
 // TODO: *`Scene shift to CG of Ajax sitting across from MC as they cheers their coffee cups`*  
+<<set $background to "cg-roasting-co">>
 Ajax hands me a cup and takes the other for himself.  
 "Mmm, smells amazing!"  
 Ajax: "Why, thank you~ I brewed it myself."  
@@ -1231,6 +1298,7 @@ With that, we cling our cups together and take our first sips.
 My body is immediately filled with warmth and bliss.  
 It tastes like new beginnings.  
 // fade to black
+<<set $background to "black">>
 <<if !$skipping>>
   <<wait 3>>
 <<endif>>
@@ -1258,6 +1326,7 @@ Ajax: Get out of here stalker before I call the authorities."
 Ajax: "Now!"
 I'm too stunned to even respond, but I turn away and continue heading home. 
 Looks like I won't be going to the coffee shop any more...
+<<set $background to "black">>
 GAME OVER! (1)
 (How about we try that again, huh?)
   -> Go back to choice before dead end
